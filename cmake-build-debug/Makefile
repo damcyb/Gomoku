@@ -123,6 +123,60 @@ ProgramowanieObiektoweC++/fast:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/build
 .PHONY : ProgramowanieObiektoweC++/fast
 
+Board.o: Board.cpp.o
+
+.PHONY : Board.o
+
+# target to build an object file
+Board.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o
+.PHONY : Board.cpp.o
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
+Game.o: Game.cpp.o
+
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ProgramowanieObiektoweC++"
+	@echo "... Board.o"
+	@echo "... Board.i"
+	@echo "... Board.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

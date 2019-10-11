@@ -78,6 +78,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/main.cpp">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>

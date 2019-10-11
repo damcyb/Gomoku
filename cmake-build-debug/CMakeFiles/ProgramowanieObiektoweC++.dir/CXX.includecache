@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/main.cpp
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp
+Board.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
+iostream
+-
+
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
+SFML/System.hpp
+-
 SFML/Graphics.hpp
+-
+SFML/Window.hpp
+-
+string
 -
 

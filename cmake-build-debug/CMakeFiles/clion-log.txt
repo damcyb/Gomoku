@@ -1,0 +1,5 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/flicom/CLionProjects/ProgramowanieObiektoweC++
+-- Found SFML .. in /Library/Frameworks/SFML.framework
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug

@@ -123,6 +123,33 @@ ProgramowanieObiektoweC++/fast:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/build
 .PHONY : ProgramowanieObiektoweC++/fast
 
+BlackStone.o: BlackStone.cpp.o
+
+.PHONY : BlackStone.o
+
+# target to build an object file
+BlackStone.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o
+.PHONY : BlackStone.cpp.o
+
+BlackStone.i: BlackStone.cpp.i
+
+.PHONY : BlackStone.i
+
+# target to preprocess a source file
+BlackStone.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.i
+.PHONY : BlackStone.cpp.i
+
+BlackStone.s: BlackStone.cpp.s
+
+.PHONY : BlackStone.s
+
+# target to generate assembly for a file
+BlackStone.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.s
+.PHONY : BlackStone.cpp.s
+
 Board.o: Board.cpp.o
 
 .PHONY : Board.o
@@ -231,6 +258,33 @@ TextureManager.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.s
 .PHONY : TextureManager.cpp.s
 
+WhiteStone.o: WhiteStone.cpp.o
+
+.PHONY : WhiteStone.o
+
+# target to build an object file
+WhiteStone.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o
+.PHONY : WhiteStone.cpp.o
+
+WhiteStone.i: WhiteStone.cpp.i
+
+.PHONY : WhiteStone.i
+
+# target to preprocess a source file
+WhiteStone.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.i
+.PHONY : WhiteStone.cpp.i
+
+WhiteStone.s: WhiteStone.cpp.s
+
+.PHONY : WhiteStone.s
+
+# target to generate assembly for a file
+WhiteStone.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.s
+.PHONY : WhiteStone.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -267,6 +321,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ProgramowanieObiektoweC++"
+	@echo "... BlackStone.o"
+	@echo "... BlackStone.i"
+	@echo "... BlackStone.s"
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
@@ -279,6 +336,9 @@ help:
 	@echo "... TextureManager.o"
 	@echo "... TextureManager.i"
 	@echo "... TextureManager.s"
+	@echo "... WhiteStone.o"
+	@echo "... WhiteStone.i"
+	@echo "... WhiteStone.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

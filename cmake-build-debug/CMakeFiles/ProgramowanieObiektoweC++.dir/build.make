@@ -122,13 +122,41 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp -o CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.s
 
+CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o: CMakeFiles/ProgramowanieObiektoweC++.dir/flags.make
+CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o: ../WhiteStone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o -c /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp
+
+CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp > CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.i
+
+CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp -o CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.s
+
+CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o: CMakeFiles/ProgramowanieObiektoweC++.dir/flags.make
+CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o: ../BlackStone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o -c /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.cpp
+
+CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.cpp > CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.i
+
+CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.cpp -o CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.s
+
 # Object files for target ProgramowanieObiektoweC++
 ProgramowanieObiektoweC_______OBJECTS = \
 "CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o" \
 "CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o" \
 "CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o" \
 "CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o" \
-"CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
+"CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o" \
+"CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o" \
+"CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o"
 
 # External object files for target ProgramowanieObiektoweC++
 ProgramowanieObiektoweC_______EXTERNAL_OBJECTS =
@@ -138,9 +166,11 @@ ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o
 ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
 ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o
 ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o
+ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o
+ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o
 ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/build.make
 ProgramowanieObiektoweC++: CMakeFiles/ProgramowanieObiektoweC++.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ProgramowanieObiektoweC++"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ProgramowanieObiektoweC++"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProgramowanieObiektoweC++.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

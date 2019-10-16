@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
@@ -100,6 +106,12 @@
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/main.cpp">

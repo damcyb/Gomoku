@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
+Stone.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
+
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
 SFML/System.hpp
 -
@@ -37,6 +41,10 @@ Board.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
 Stone.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
+WhiteStone.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
+BlackStone.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
 SFML/System.hpp
@@ -57,4 +65,8 @@ SFML/Window.hpp
 -
 string
 -
+
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
+Stone.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
 

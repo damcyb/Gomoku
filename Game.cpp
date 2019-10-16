@@ -21,10 +21,30 @@ void Game::displayWindow() {
     float dy = 0;
 
     int size = 56;
-
+    RectangleShape fieldHighlight;
+    int coordCorrectionX = 30;
+    int coordCorrectionY = 32;
+    Board board;
     board.loadBoardTexture();
-    stone.loadStoneTexture();
-    stoneSprite = stone.getStoneTexture();
+
+    Sprite blackStoneSprite;
+    Sprite whiteStoneSprite;
+
+    Sprite whiteStonesArray[162];
+    int whiteCounter = 0;
+
+    Sprite blackStonesArray[162];
+    int blackCounter = 0;
+
+    Stone whiteStone = WhiteStone();
+    Stone blackStone = BlackStone();
+
+    whiteStone.loadStoneTexture("./textures/stone_white.png");
+    blackStone.loadStoneTexture("./textures/stone_black.png");
+
+    whiteStoneSprite = whiteStone.getStoneTexture();
+    blackStoneSprite = blackStone.getStoneTexture();
+
     while( applicationWindow.isOpen()) {
 
         Vector2i position = Mouse::getPosition(applicationWindow);
@@ -42,35 +62,46 @@ void Game::displayWindow() {
 
             if(event.type == Event::MouseButtonPressed) {
                 if(event.key.code == Mouse::Left) {
-//                    if(stoneSprite.getGlobalBounds().contains(position.x,position.y)) {
-//                        isMove = true;
-//                        dx = position.x - stoneSprite.getPosition().x;
-//                        dy = position.y - stoneSprite.getPosition().y;
-//                    }
                     isMove = true;
-                    Stone stone1;
-                    Sprite stoneSprite1;
-                    stone1.loadStoneTexture();
-                    stoneSprite1 = stone1.getStoneTexture();
-                    //stoneSprite1.setPosition()
+                    dx = position.x;
+                    dy = position.y;
+
+                    blackStonesArray[blackCounter] = blackStoneSprite;
+                    blackStonesArray[blackCounter].setPosition(position.x - coordCorrectionX, position.y - coordCorrectionY);
+                    blackCounter++;
+
+                    cout << position.x << "  " << position.y << endl;
+
+//                    Vector2f p = blackStoneSprite.getPosition() + Vector2f(size/2, size/2);
+//                    Vector2f newPos = Vector2f(size * int(p.x / size), size * int(p.y / size));
+//                    blackStonesArray[blackCounter].setPosition(newPos);
+//                    blackCounter++;
                 }
             }
             if(event.type == Event::MouseButtonReleased) {
                 if (event.key.code == Mouse::Left) {
                     isMove = false;
-                    Vector2f p = stoneSprite.getPosition() + Vector2f(size/2, size/2);
-                    Vector2f newPos = Vector2f(size * int(p.x / size), size * int(p.y / size));
-                    stoneSprite.setPosition(newPos);
-
+//                    Vector2f p = blackStoneSprite.getPosition() + Vector2f(size/2, size/2);
+//                    Vector2f newPos = Vector2f(size * int(p.x / size), size * int(p.y / size));
+//                    blackStoneSprite.setPosition(newPos);
                 }
             }
             if(isMove) {
-                stoneSprite.setPosition(position.x - dx, position.y - dy);
+                blackStoneSprite.setPosition(position.x - dx, position.y - dy);
+            }
+            if(event.type == Event::MouseMoved) {
+                fieldHighlight = RectangleShape(Vector2f(53,53));
+                fieldHighlight.setPosition(56 * ((position.x - 21)/ 56) + 26, 56 * ((position.y - 21) / 56) + 26);
+                fieldHighlight.setFillColor(Color(30, 30, 30, 80) );
             }
         }
         applicationWindow.clear();
         applicationWindow.draw(board.getBoardTexture());
-        applicationWindow.draw(stoneSprite);
+        for(int i = 0; i < 162; i++) {
+            applicationWindow.draw(blackStonesArray[i]);
+            applicationWindow.draw(whiteStonesArray[i]);
+        }
+        applicationWindow.draw(fieldHighlight);
         applicationWindow.display();
     }
 }

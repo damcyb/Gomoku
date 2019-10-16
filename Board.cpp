@@ -10,11 +10,12 @@
 using namespace std;
 
 void Board::loadBoardTexture() {
+    double factor = 2.43 * 0.96;
     TextureManager textureManager;
     board.loadFromFile("./textures/board.png");
     //board = textureManager.getboardTexture();
     boardPNG.setTexture(board);
-    boardPNG.setScale(2.43,2.43);
+    boardPNG.setScale(factor,factor);
 }
 
 Sprite Board::getBoardTexture() {

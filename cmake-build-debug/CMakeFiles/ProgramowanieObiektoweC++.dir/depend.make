@@ -11,6 +11,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o: ../TextureManager.h
 
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../BlackStone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Board.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Constants.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Game.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Stone.h
@@ -29,6 +30,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o: ../WhiteStone.h
 
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../BlackStone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Board.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Constants.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Game.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Stone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../WhiteStone.h

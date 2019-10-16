@@ -16,25 +16,18 @@ Game::Game():applicationWindow(
 
 void Game::displayWindow() {
 
-    bool isMove = false;
-    float dx = 0;
-    float dy = 0;
+    bool whiteMove = true;
 
-    int size = 56;
     RectangleShape fieldHighlight;
-    int coordCorrectionX = 30;
-    int coordCorrectionY = 32;
+
     Board board;
     board.loadBoardTexture();
 
     Sprite blackStoneSprite;
     Sprite whiteStoneSprite;
 
-    Sprite whiteStonesArray[162];
-    int whiteCounter = 0;
-
-    Sprite blackStonesArray[162];
-    int blackCounter = 0;
+    Sprite stonesArray[324];
+    int stoneCounter = 0;
 
     Stone whiteStone = WhiteStone();
     Stone blackStone = BlackStone();
@@ -62,46 +55,65 @@ void Game::displayWindow() {
 
             if(event.type == Event::MouseButtonPressed) {
                 if(event.key.code == Mouse::Left) {
-                    isMove = true;
-                    dx = position.x;
-                    dy = position.y;
+                    if(insideGameField(position.x, position.y)) {
+                        if(whiteMove) {
 
-                    blackStonesArray[blackCounter] = blackStoneSprite;
-                    blackStonesArray[blackCounter].setPosition(position.x - coordCorrectionX, position.y - coordCorrectionY);
-                    blackCounter++;
+                            stonesArray[stoneCounter] = whiteStoneSprite;
+                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                       56 * ((position.y - 21) / 56) + 24);
+                            stoneCounter++;
+                            whiteMove = false;
 
-                    cout << position.x << "  " << position.y << endl;
-
-//                    Vector2f p = blackStoneSprite.getPosition() + Vector2f(size/2, size/2);
-//                    Vector2f newPos = Vector2f(size * int(p.x / size), size * int(p.y / size));
-//                    blackStonesArray[blackCounter].setPosition(newPos);
-//                    blackCounter++;
+                        }
+                        else {
+                            stonesArray[stoneCounter] = blackStoneSprite;
+                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                    56 * ((position.y - 21) / 56) + 24);
+                            stoneCounter++;
+                            whiteMove = true;
+                        }
+                    }
                 }
             }
             if(event.type == Event::MouseButtonReleased) {
                 if (event.key.code == Mouse::Left) {
-                    isMove = false;
-//                    Vector2f p = blackStoneSprite.getPosition() + Vector2f(size/2, size/2);
-//                    Vector2f newPos = Vector2f(size * int(p.x / size), size * int(p.y / size));
-//                    blackStoneSprite.setPosition(newPos);
                 }
             }
-            if(isMove) {
-                blackStoneSprite.setPosition(position.x - dx, position.y - dy);
-            }
+            /* Cala plansza ma wymiar 1008 x 1008 jednostek i ma 18x18 pol. Liczby dopasowano w taki sposob, aby
+             * podswietlajacy pole prostokat znajdowal sie na wlasciwym polu
+             * 56 - rozm pojedynczego boku pola
+             * 21 - przesuniecie o grubosc ramki (obwodki pola do gry)
+             * 26 - polowa rozmiaru pola +- korekta ustawienia
+             * 53 - bok pola pomniejszony tak, zeby podswietlenie nie zaslanialo krawedzi pola
+             */
             if(event.type == Event::MouseMoved) {
-                fieldHighlight = RectangleShape(Vector2f(53,53));
-                fieldHighlight.setPosition(56 * ((position.x - 21)/ 56) + 26, 56 * ((position.y - 21) / 56) + 26);
-                fieldHighlight.setFillColor(Color(30, 30, 30, 80) );
+                if(insideGameField(position.x, position.y)) {
+                    fieldHighlight = RectangleShape(Vector2f(53,53));
+                    fieldHighlight.setPosition(56 * ((position.x - 21)/ 56) + 26, 56 * ((position.y - 21) / 56) + 26);
+                    fieldHighlight.setFillColor(Color(30, 30, 30, 80) );
+                }
+                else {
+                    fieldHighlight = RectangleShape(Vector2f(0,0));
+                }
             }
         }
         applicationWindow.clear();
         applicationWindow.draw(board.getBoardTexture());
-        for(int i = 0; i < 162; i++) {
-            applicationWindow.draw(blackStonesArray[i]);
-            applicationWindow.draw(whiteStonesArray[i]);
+        for(int i = 0; i < 324; i++) {
+            applicationWindow.draw(stonesArray[i]);
         }
         applicationWindow.draw(fieldHighlight);
         applicationWindow.display();
     }
 }
+
+bool Game::insideGameField(int x, int y) {
+    Constants constants;
+    if(x > constants.leftBoarder && x < constants.rightBoarder
+       && y > constants.upBoarder && y < constants.downBoarder) {
+        return true;
+    } else {
+        return false;
+    }
+}
+

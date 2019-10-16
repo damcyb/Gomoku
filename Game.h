@@ -14,6 +14,7 @@
 #include "Stone.h"
 #include "WhiteStone.h"
 #include "BlackStone.h"
+#include "Constants.h"
 
 using namespace sf;
 
@@ -30,6 +31,7 @@ private:
 public:
     Game();
     void displayWindow();
+    bool insideGameField(int x, int y);
 };
 
 

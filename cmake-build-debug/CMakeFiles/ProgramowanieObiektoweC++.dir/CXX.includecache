@@ -20,6 +20,8 @@ SFML/Window.hpp
 string
 -
 
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
+
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
 Game.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
@@ -45,6 +47,8 @@ WhiteStone.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
 BlackStone.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
+Constants.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
 SFML/System.hpp

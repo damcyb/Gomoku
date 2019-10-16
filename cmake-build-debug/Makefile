@@ -177,6 +177,60 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+Stone.o: Stone.cpp.o
+
+.PHONY : Stone.o
+
+# target to build an object file
+Stone.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o
+.PHONY : Stone.cpp.o
+
+Stone.i: Stone.cpp.i
+
+.PHONY : Stone.i
+
+# target to preprocess a source file
+Stone.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.i
+.PHONY : Stone.cpp.i
+
+Stone.s: Stone.cpp.s
+
+.PHONY : Stone.s
+
+# target to generate assembly for a file
+Stone.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.s
+.PHONY : Stone.cpp.s
+
+TextureManager.o: TextureManager.cpp.o
+
+.PHONY : TextureManager.o
+
+# target to build an object file
+TextureManager.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o
+.PHONY : TextureManager.cpp.o
+
+TextureManager.i: TextureManager.cpp.i
+
+.PHONY : TextureManager.i
+
+# target to preprocess a source file
+TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.i
+.PHONY : TextureManager.cpp.i
+
+TextureManager.s: TextureManager.cpp.s
+
+.PHONY : TextureManager.s
+
+# target to generate assembly for a file
+TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.s
+.PHONY : TextureManager.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -219,6 +273,12 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... Stone.o"
+	@echo "... Stone.i"
+	@echo "... Stone.s"
+	@echo "... TextureManager.o"
+	@echo "... TextureManager.i"
+	@echo "... TextureManager.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -11,6 +11,7 @@
 #include <string>
 
 #include "Board.h"
+#include "Stone.h"
 
 using namespace sf;
 
@@ -21,6 +22,8 @@ private:
     String applicationTitle = "GOMOKU";
     RenderWindow applicationWindow;
     Board board;
+    Stone stone;
+    Sprite stoneSprite;
 
 public:
     Game();

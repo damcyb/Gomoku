@@ -90,6 +90,12 @@
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>

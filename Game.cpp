@@ -18,6 +18,8 @@ void Game::displayWindow() {
 
     bool whiteMove = true;
 
+    BoardLogic boardLogic;
+
     RectangleShape fieldHighlight;
 
     Board board;
@@ -43,38 +45,45 @@ void Game::displayWindow() {
         Vector2i position = Mouse::getPosition(applicationWindow);
 
         Event event;
-        while( applicationWindow.pollEvent( event )){
-            if( event.type == Event::Closed )
+        while( applicationWindow.pollEvent( event )) {
+            if (event.type == Event::Closed)
                 applicationWindow.close();
 
-            if( event.type == Event::KeyPressed && event.key.code == Keyboard::Escape )
+            if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
                 applicationWindow.close();
 
-            if( event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Middle )
+            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Middle)
                 applicationWindow.close();
 
-            if(event.type == Event::MouseButtonPressed) {
-                if(event.key.code == Mouse::Left) {
-                    if(insideGameField(position.x, position.y)) {
-                        if(whiteMove) {
+            if (event.type == Event::MouseButtonPressed) {
+                if (event.key.code == Mouse::Left) {
+                    if (insideGameField(position.x, position.y)) {
+                        if (boardLogic.isMarked(position.x, position.y)) {
+                            if (whiteMove) {
 
-                            stonesArray[stoneCounter] = whiteStoneSprite;
-                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
-                                                                       56 * ((position.y - 21) / 56) + 24);
-                            stoneCounter++;
-                            whiteMove = false;
+                                stonesArray[stoneCounter] = whiteStoneSprite;
+                                stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                      56 * ((position.y - 21) / 56) + 24);
+                                stoneCounter++;
+                                whiteMove = false;
 
-                        }
-                        else {
-                            stonesArray[stoneCounter] = blackStoneSprite;
-                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
-                                    56 * ((position.y - 21) / 56) + 24);
-                            stoneCounter++;
-                            whiteMove = true;
+                            } else {
+                                stonesArray[stoneCounter] = blackStoneSprite;
+                                stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                      56 * ((position.y - 21) / 56) + 24);
+                                stoneCounter++;
+                                whiteMove = true;
+                            }
+                            boardLogic.transformToArrayIndex(
+                                    stonesArray[stoneCounter - 1].getPosition().x,
+                                    stonesArray[stoneCounter - 1].getPosition().y,
+                                    !whiteMove);
+                            //boardLogic.print();
                         }
                     }
                 }
             }
+
             if(event.type == Event::MouseButtonReleased) {
                 if (event.key.code == Mouse::Left) {
                 }
@@ -109,8 +118,8 @@ void Game::displayWindow() {
 
 bool Game::insideGameField(int x, int y) {
     Constants constants;
-    if(x > constants.leftBoarder && x < constants.rightBoarder
-       && y > constants.upBoarder && y < constants.downBoarder) {
+    if(x > constants.LEFT_BOARDER && x < constants.RIGHT_BOARDER
+       && y > constants.UP_BOARDER && y < constants.DOWN_BOARDER) {
         return true;
     } else {
         return false;

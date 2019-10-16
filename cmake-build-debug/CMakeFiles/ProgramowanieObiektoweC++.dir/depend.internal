@@ -9,9 +9,14 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
@@ -31,6 +36,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h

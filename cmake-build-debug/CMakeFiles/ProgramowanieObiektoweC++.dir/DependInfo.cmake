@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o"
+  "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o"

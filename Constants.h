@@ -8,11 +8,14 @@
 
 static class Constants {
 public:
-    static const int boardSize = 1050;
-    static const int leftBoarder = 24;
-    static const int rightBoarder = boardSize - 24;
-    static const int upBoarder = 24;
-    static const int downBoarder = boardSize - 24;
+    static const int BOARD_SIZE = 1050;
+    static const int LEFT_BOARDER = 24;
+    static const int RIGHT_BOARDER = BOARD_SIZE - 24;
+    static const int UP_BOARDER = 24;
+    static const int DOWN_BOARDER = BOARD_SIZE - 24;
+    static const int BLANK_FIELD = 0;
+    static const int WHITE_FIELD = 1;
+    static const int BLACK_FIELD = 2;
 };
 
 

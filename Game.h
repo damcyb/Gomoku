@@ -15,6 +15,7 @@
 #include "WhiteStone.h"
 #include "BlackStone.h"
 #include "Constants.h"
+#include "BoardLogic.h"
 
 using namespace sf;
 

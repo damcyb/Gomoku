@@ -177,6 +177,33 @@ Board.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
+BoardLogic.o: BoardLogic.cpp.o
+
+.PHONY : BoardLogic.o
+
+# target to build an object file
+BoardLogic.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o
+.PHONY : BoardLogic.cpp.o
+
+BoardLogic.i: BoardLogic.cpp.i
+
+.PHONY : BoardLogic.i
+
+# target to preprocess a source file
+BoardLogic.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.i
+.PHONY : BoardLogic.cpp.i
+
+BoardLogic.s: BoardLogic.cpp.s
+
+.PHONY : BoardLogic.s
+
+# target to generate assembly for a file
+BoardLogic.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.s
+.PHONY : BoardLogic.cpp.s
+
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -327,6 +354,9 @@ help:
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
+	@echo "... BoardLogic.o"
+	@echo "... BoardLogic.i"
+	@echo "... BoardLogic.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"

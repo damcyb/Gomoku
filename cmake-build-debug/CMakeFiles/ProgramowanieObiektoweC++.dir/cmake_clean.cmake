@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o"
+  "CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o"

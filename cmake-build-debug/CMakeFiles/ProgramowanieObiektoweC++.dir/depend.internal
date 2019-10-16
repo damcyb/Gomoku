@@ -13,6 +13,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
@@ -23,6 +24,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
@@ -33,6 +35,9 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.o
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.cpp
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
@@ -41,4 +46,5 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/main.cpp

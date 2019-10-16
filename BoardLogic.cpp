@@ -37,6 +37,21 @@ bool BoardLogic::isMarked(int x, int y) {
     }
 }
 
+int BoardLogic::checkWinSituation() {
+    if(winWays.horizontalTest(boardFieldsArray)) {
+        cout << "WIN_HORIZONTAL ";
+    }
+    if(winWays.verticalTest(boardFieldsArray)) {
+        cout << "WIN_VERTICAL ";
+    }
+    if(winWays.diagonalTest1(boardFieldsArray)) {
+        cout << "WIN_DIAGONAL1 ";
+    }
+    if(winWays.diagonalTest2(boardFieldsArray)) {
+        cout << "WIN_DIAGONAL2 ";
+    }
+}
+
 void BoardLogic::print() {
     for(int i = 0; i < 18; i++) {
         for(int j = 0; j < 18; j++) {

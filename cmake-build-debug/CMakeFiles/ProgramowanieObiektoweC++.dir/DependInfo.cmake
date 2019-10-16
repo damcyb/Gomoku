@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o"
+  "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/main.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")

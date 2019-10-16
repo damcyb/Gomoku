@@ -6,11 +6,13 @@
 #define PROGRAMOWANIEOBIEKTOWEC_BOARDLOGIC_H
 
 #include "Constants.h"
+#include "WinWays.h"
 
 class BoardLogic {
 
 private:
     Constants constants;
+    WinWays winWays;
     int boardFieldsArray[18][18];
 
 public:
@@ -20,6 +22,7 @@ public:
     //void markFieldAsDisabled(int i, int j);
     bool isMarked(int i, int j);
     void print();
+    int checkWinSituation();
 };
 
 

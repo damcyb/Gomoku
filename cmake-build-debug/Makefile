@@ -312,6 +312,33 @@ WhiteStone.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.s
 .PHONY : WhiteStone.cpp.s
 
+WinWays.o: WinWays.cpp.o
+
+.PHONY : WinWays.o
+
+# target to build an object file
+WinWays.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.o
+.PHONY : WinWays.cpp.o
+
+WinWays.i: WinWays.cpp.i
+
+.PHONY : WinWays.i
+
+# target to preprocess a source file
+WinWays.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.i
+.PHONY : WinWays.cpp.i
+
+WinWays.s: WinWays.cpp.s
+
+.PHONY : WinWays.s
+
+# target to generate assembly for a file
+WinWays.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.s
+.PHONY : WinWays.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -369,6 +396,9 @@ help:
 	@echo "... WhiteStone.o"
 	@echo "... WhiteStone.i"
 	@echo "... WhiteStone.s"
+	@echo "... WinWays.o"
+	@echo "... WinWays.i"
+	@echo "... WinWays.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

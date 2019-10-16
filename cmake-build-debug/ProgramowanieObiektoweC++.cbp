@@ -123,6 +123,12 @@
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/main.cpp">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>

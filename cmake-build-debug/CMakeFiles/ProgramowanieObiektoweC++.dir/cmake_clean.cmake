@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o"
+  "CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o"
   "ProgramowanieObiektoweC++"
   "ProgramowanieObiektoweC++.pdb"

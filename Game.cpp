@@ -86,6 +86,7 @@ void Game::displayWindow() {
 
             if(event.type == Event::MouseButtonReleased) {
                 if (event.key.code == Mouse::Left) {
+                    boardLogic.checkWinSituation();
                 }
             }
             /* Cala plansza ma wymiar 1008 x 1008 jednostek i ma 18x18 pol. Liczby dopasowano w taki sposob, aby
@@ -106,6 +107,7 @@ void Game::displayWindow() {
                 }
             }
         }
+
         applicationWindow.clear();
         applicationWindow.draw(board.getBoardTexture());
         for(int i = 0; i < 324; i++) {
@@ -113,6 +115,7 @@ void Game::displayWindow() {
         }
         applicationWindow.draw(fieldHighlight);
         applicationWindow.display();
+
     }
 }
 

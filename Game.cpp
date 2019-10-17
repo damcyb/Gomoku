@@ -138,16 +138,16 @@ void Game::displayGamePage() {
             applicationWindow.draw(stonesArray[i]);
         }
         applicationWindow.draw(fieldHighlight);
-//        if(gameWon) {
-//
-//            if(!whiteMove) { //po ostatnim ruchu bialych whiteMove zmieni wartosc
-//
-//                applicationWindow.draw(gameOver.getGameOverContainter());
-//                //applicationWindow.draw(gameOver.getGameOverText());
-//            } else {
-//
-//            }
-//        }
+        if(gameWon) {
+
+            if(!whiteMove) { //po ostatnim ruchu bialych whiteMove zmieni wartosc
+
+                displayGameOverPage(true);
+                //applicationWindow.draw(gameOver.getGameOverText());
+            } else {
+                displayGameOverPage(false);
+            }
+        }
 
         applicationWindow.display();
 
@@ -206,8 +206,36 @@ void Game::displayGameStartPage() {
     }
 }
 
-void Game::displayGameOverPage() {
+void Game::displayGameOverPage(bool whiteWin) {
+    GameOver gameOver;
+    gameOver.loadWhiteWinTexture();
+    gameOver.loadBlackWinTexture();
 
+    while( applicationWindow.isOpen()) {
+        Event event;
+        while( applicationWindow.pollEvent( event )) {
+            if (event.type == Event::Closed)
+                applicationWindow.close();
+
+            if (event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
+                applicationWindow.close();
+
+            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Middle)
+                applicationWindow.close();
+
+//            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left)
+//                displayGamePage();
+
+        }
+        applicationWindow.clear();
+        if(whiteWin){
+            applicationWindow.draw(gameOver.getWhiteWinTexture());
+        }
+        else {
+            applicationWindow.draw(gameOver.getBlackWinTexture());
+        }
+        applicationWindow.display();
+    }
 }
 
 

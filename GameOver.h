@@ -12,16 +12,15 @@ using namespace sf;
 
 class GameOver {
 private:
-    Font font;
-    RectangleShape gameOverContainer;
-    Text gameOverText;
+    Texture whiteWinTexture;
+    Texture blackWinTexture;
+    Sprite whiteWinSprite;
+    Sprite blackWinSprite;
 public:
-    GameOver();
-    Font loadFont(const String &path);
-    RectangleShape getGameOverContainter();
-    Text getGameOverText();
-    void whiteWin();
-    void blackWin();
+    void loadWhiteWinTexture();
+    void loadBlackWinTexture();
+    Sprite getWhiteWinTexture();
+    Sprite getBlackWinTexture();
 };
 
 

@@ -37,7 +37,7 @@ public:
     Game();
     void displayGamePage();
     void displayGameStartPage();
-    void displayGameOverPage();
+    void displayGameOverPage(bool whiteWin);
     void displayGameLogPage();
 
 };

@@ -8,22 +8,25 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o
 CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
- /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.o
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.cpp
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BlackStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
- /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o
@@ -32,9 +35,6 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o
 CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
-CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o
- /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.cpp
- /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp
@@ -47,6 +47,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h

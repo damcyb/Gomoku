@@ -18,10 +18,18 @@ void GameOver::loadBlackWinTexture() {
     //blackWinSprite.setScale(factor,factor);
 }
 
+void GameOver::loadGameLogCommunicate() {
+    gameLogCommunicateTexture.loadFromFile("./textures/gameLog_communicate.jpg");
+    gameLogCommunicateSprite.setTexture(gameLogCommunicateTexture);
+}
 Sprite GameOver::getWhiteWinTexture() {
     return whiteWinSprite;
 }
 
 Sprite GameOver::getBlackWinTexture() {
     return blackWinSprite;
+}
+
+Sprite GameOver::getGameLocCommunicate() {
+    return gameLogCommunicateSprite;
 }

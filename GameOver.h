@@ -14,13 +14,17 @@ class GameOver {
 private:
     Texture whiteWinTexture;
     Texture blackWinTexture;
+    Texture gameLogCommunicateTexture;
     Sprite whiteWinSprite;
     Sprite blackWinSprite;
+    Sprite gameLogCommunicateSprite;
 public:
     void loadWhiteWinTexture();
     void loadBlackWinTexture();
+    void loadGameLogCommunicate();
     Sprite getWhiteWinTexture();
     Sprite getBlackWinTexture();
+    Sprite getGameLocCommunicate();
 };
 
 

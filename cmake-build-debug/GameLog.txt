@@ -1,0 +1,12 @@
+# GOMOKU GAMELOG #
+W: row 8 col 13
+B: row 8 col 12
+W: row 7 col 12
+B: row 7 col 11
+W: row 6 col 11
+B: row 6 col 10
+W: row 4 col 10
+B: row 6 col 9
+W: row 5 col 10
+B: row 5 col 9
+W: row 4 col 9

@@ -17,6 +17,7 @@
 #include "Constants.h"
 #include "BoardLogic.h"
 #include "GameOver.h"
+#include "FileManager.h"
 
 using namespace sf;
 
@@ -26,7 +27,11 @@ private:
     int screenHeight = 1050;
     String applicationTitle = "GOMOKU";
     RenderWindow applicationWindow;
+    FileManager fileManager;
+    bool gameLogOpen = false;
     bool insideGameField(int x, int y);
+    bool playAgainButtonClicked(int x, int y);
+    bool gameLogButtonClicked(int x, int y);
 //    Sprite startGameSprite;
 //    Texture startGameTexture;
     //Board board;

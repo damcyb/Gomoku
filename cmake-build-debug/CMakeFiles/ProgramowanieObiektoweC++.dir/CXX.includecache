@@ -28,11 +28,21 @@ WinWays.h
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
 
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
+SFML/System.hpp
+-
+SFML/Graphics.hpp
+-
+SFML/Window.hpp
+-
+string
+-
+
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
 Game.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
-TextureManager.h
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
+FileManager.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
 iostream
 -
 
@@ -59,6 +69,8 @@ BoardLogic.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
 GameOver.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
+FileManager.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
 SFML/Graphics.hpp
@@ -67,16 +79,6 @@ string
 -
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
-SFML/System.hpp
--
-SFML/Graphics.hpp
--
-SFML/Window.hpp
--
-string
--
-
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
 SFML/System.hpp
 -
 SFML/Graphics.hpp

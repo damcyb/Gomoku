@@ -99,6 +99,12 @@
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
@@ -115,12 +121,6 @@
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h">
-			<Option target="ProgramowanieObiektoweC++"/>
-		</Unit>
-		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.cpp">
-			<Option target="ProgramowanieObiektoweC++"/>
-		</Unit>
-		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp">

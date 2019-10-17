@@ -3,7 +3,7 @@
 //
 
 #include "Game.h"
-#include "TextureManager.h"
+#include "FileManager.h"
 
 #include <iostream>
 
@@ -18,6 +18,7 @@ void Game::displayGamePage() {
 
 //    GameOver gameOver;
 //    gameOver.loadFont("./textures/font.otf");
+
 
     bool whiteMove = true;
     bool gameWon = false;
@@ -46,11 +47,12 @@ void Game::displayGamePage() {
     whiteStoneSprite = whiteStone.getStoneTexture();
     blackStoneSprite = blackStone.getStoneTexture();
 
-
+    fileManager.writeTitleToFile();
 
     while( applicationWindow.isOpen()) {
 
         Vector2i position = Mouse::getPosition(applicationWindow);
+
 
         Event event;
         while( applicationWindow.pollEvent( event )) {
@@ -88,6 +90,7 @@ void Game::displayGamePage() {
                                         stonesArray[stoneCounter - 1].getPosition().y,
                                         !whiteMove);
                                 //boardLogic.print();
+                                fileManager.writePositionToFile(!whiteMove, position.x, position.y);
                             }
                         }
                     }
@@ -212,6 +215,9 @@ void Game::displayGameOverPage(bool whiteWin) {
     gameOver.loadBlackWinTexture();
 
     while( applicationWindow.isOpen()) {
+
+        Vector2i position = Mouse::getPosition(applicationWindow);
+
         Event event;
         while( applicationWindow.pollEvent( event )) {
             if (event.type == Event::Closed)
@@ -223,9 +229,14 @@ void Game::displayGameOverPage(bool whiteWin) {
             if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Middle)
                 applicationWindow.close();
 
-//            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left)
-//                displayGamePage();
-
+            if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Left) {
+                if (playAgainButtonClicked(position.x, position.y)) {
+                    displayGamePage();
+                }
+                if (gameLogButtonClicked(position.x, position.y)) {
+                    displayGameLogPage();
+                }
+            }
         }
         applicationWindow.clear();
         if(whiteWin){
@@ -234,9 +245,34 @@ void Game::displayGameOverPage(bool whiteWin) {
         else {
             applicationWindow.draw(gameOver.getBlackWinTexture());
         }
+        if(gameLogOpen) {
+            applicationWindow.draw(gameOver.getGameLocCommunicate()); // napis do zrobienia!!!
+        }
         applicationWindow.display();
     }
 }
+
+bool Game::playAgainButtonClicked(int x, int y) {
+    if(x > 202 && x < 642 && y > 824 && y < 950 && !gameLogOpen) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool Game::gameLogButtonClicked(int x, int y) {
+    if(x > 970 && x < 1418 && y > 818 && y < 950) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void Game::displayGameLogPage() {
+    gameLogOpen = true;
+    fileManager.openGameLog();
+}
+
 
 
 

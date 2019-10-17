@@ -204,6 +204,33 @@ BoardLogic.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.s
 .PHONY : BoardLogic.cpp.s
 
+FileManager.o: FileManager.cpp.o
+
+.PHONY : FileManager.o
+
+# target to build an object file
+FileManager.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.o
+.PHONY : FileManager.cpp.o
+
+FileManager.i: FileManager.cpp.i
+
+.PHONY : FileManager.i
+
+# target to preprocess a source file
+FileManager.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.i
+.PHONY : FileManager.cpp.i
+
+FileManager.s: FileManager.cpp.s
+
+.PHONY : FileManager.s
+
+# target to generate assembly for a file
+FileManager.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.s
+.PHONY : FileManager.cpp.s
+
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -284,33 +311,6 @@ Stone.s: Stone.cpp.s
 Stone.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.s
 .PHONY : Stone.cpp.s
-
-TextureManager.o: TextureManager.cpp.o
-
-.PHONY : TextureManager.o
-
-# target to build an object file
-TextureManager.cpp.o:
-	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.o
-.PHONY : TextureManager.cpp.o
-
-TextureManager.i: TextureManager.cpp.i
-
-.PHONY : TextureManager.i
-
-# target to preprocess a source file
-TextureManager.cpp.i:
-	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.i
-.PHONY : TextureManager.cpp.i
-
-TextureManager.s: TextureManager.cpp.s
-
-.PHONY : TextureManager.s
-
-# target to generate assembly for a file
-TextureManager.cpp.s:
-	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/TextureManager.cpp.s
-.PHONY : TextureManager.cpp.s
 
 WhiteStone.o: WhiteStone.cpp.o
 
@@ -411,6 +411,9 @@ help:
 	@echo "... BoardLogic.o"
 	@echo "... BoardLogic.i"
 	@echo "... BoardLogic.s"
+	@echo "... FileManager.o"
+	@echo "... FileManager.i"
+	@echo "... FileManager.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
@@ -420,9 +423,6 @@ help:
 	@echo "... Stone.o"
 	@echo "... Stone.i"
 	@echo "... Stone.s"
-	@echo "... TextureManager.o"
-	@echo "... TextureManager.i"
-	@echo "... TextureManager.s"
 	@echo "... WhiteStone.o"
 	@echo "... WhiteStone.i"
 	@echo "... WhiteStone.s"

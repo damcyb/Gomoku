@@ -16,23 +16,30 @@
 #include "BlackStone.h"
 #include "Constants.h"
 #include "BoardLogic.h"
+#include "GameOver.h"
 
 using namespace sf;
 
 class Game: public RenderWindow {
 private:
-    int screenWidth = 1050;
+    int screenWidth = 1600;
     int screenHeight = 1050;
     String applicationTitle = "GOMOKU";
     RenderWindow applicationWindow;
+    bool insideGameField(int x, int y);
+//    Sprite startGameSprite;
+//    Texture startGameTexture;
     //Board board;
     //Stone stone;
     //Sprite stoneSprite;
 
 public:
     Game();
-    void displayWindow();
-    bool insideGameField(int x, int y);
+    void displayGamePage();
+    void displayGameStartPage();
+    void displayGameOverPage();
+    void displayGameLogPage();
+
 };
 
 

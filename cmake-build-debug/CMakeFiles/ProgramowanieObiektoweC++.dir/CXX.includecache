@@ -6,25 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp
-BoardLogic.h
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp
+Board.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
+TextureManager.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
 iostream
 -
 
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
-Constants.h
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
-WinWays.h
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
-
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Constants.h
-
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.cpp
-WinWays.h
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
-iostream
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
+SFML/System.hpp
+-
+SFML/Graphics.hpp
+-
+SFML/Window.hpp
+-
+string
 -
 
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/TextureManager.h
+SFML/System.hpp
+-
+SFML/Graphics.hpp
+-
+SFML/Window.hpp
+-
+string
+-
 

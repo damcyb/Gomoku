@@ -231,6 +231,33 @@ Game.cpp.s:
 	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
+GameOver.o: GameOver.cpp.o
+
+.PHONY : GameOver.o
+
+# target to build an object file
+GameOver.cpp.o:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o
+.PHONY : GameOver.cpp.o
+
+GameOver.i: GameOver.cpp.i
+
+.PHONY : GameOver.i
+
+# target to preprocess a source file
+GameOver.cpp.i:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.i
+.PHONY : GameOver.cpp.i
+
+GameOver.s: GameOver.cpp.s
+
+.PHONY : GameOver.s
+
+# target to generate assembly for a file
+GameOver.cpp.s:
+	$(MAKE) -f CMakeFiles/ProgramowanieObiektoweC++.dir/build.make CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.s
+.PHONY : GameOver.cpp.s
+
 Stone.o: Stone.cpp.o
 
 .PHONY : Stone.o
@@ -387,6 +414,9 @@ help:
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
+	@echo "... GameOver.o"
+	@echo "... GameOver.i"
+	@echo "... GameOver.s"
 	@echo "... Stone.o"
 	@echo "... Stone.i"
 	@echo "... Stone.s"

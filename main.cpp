@@ -7,7 +7,7 @@ using namespace sf;
 int main()
 {
     Game game;
-    game.displayWindow();
+    game.displayGameStartPage();
 
     return 0;
 }

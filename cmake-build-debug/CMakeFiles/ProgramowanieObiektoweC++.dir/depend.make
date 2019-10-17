@@ -20,10 +20,14 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../BoardLogic.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Constants.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Game.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../GameOver.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../Stone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../TextureManager.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../WhiteStone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o: ../WinWays.h
+
+CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o: ../GameOver.cpp
+CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o: ../GameOver.h
 
 CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o: ../Stone.cpp
 CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o: ../Stone.h
@@ -43,6 +47,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Board.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../BoardLogic.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Constants.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Game.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../GameOver.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../Stone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../WhiteStone.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o: ../WinWays.h

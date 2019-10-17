@@ -15,10 +15,20 @@ using namespace sf;
 class Board {
 private:
     Texture board;
+    Texture playersTableTexture;
+    Texture playersUnderlineTexture;
     Sprite boardPNG;
+    Sprite playersTableSprite;
+    Sprite playersUnderlineSprite;
+
 public:
     void loadBoardTexture();
+    void loadPlayersTableTexture();
+    void loadPlayersUnderlineTexture();
+    void setPlayersUnderlinePosition(int x, int y);
     Sprite getBoardTexture();
+    Sprite getPlayersTableTexture();
+    Sprite getPlayersUnderlineTexture();
 };
 
 

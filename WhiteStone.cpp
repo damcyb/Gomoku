@@ -8,10 +8,4 @@ WhiteStone::WhiteStone() {
     loadStoneTexture("./textures/stone_white.png");
 }
 
-WhiteStone::WhiteStone(double x, double y) {
-    this->setXCoord(x);
-    this->setYCoord(y);
-    loadStoneTexture("./textures/stone_white.png");
-}
-
 

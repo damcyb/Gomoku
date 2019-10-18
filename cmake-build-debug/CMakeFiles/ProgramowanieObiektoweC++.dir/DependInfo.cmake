@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o"
+  "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/GameStart.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o"
   "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.cpp" "/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.o"

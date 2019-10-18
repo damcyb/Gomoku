@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o"
+  "CMakeFiles/ProgramowanieObiektoweC++.dir/GameStart.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o"
   "CMakeFiles/ProgramowanieObiektoweC++.dir/WinWays.cpp.o"

@@ -7,8 +7,6 @@
 
 
 class WinWays {
-private:
-
 public:
     bool horizontalTest(int board[18][18]);
     bool verticalTest(int board[18][18]);

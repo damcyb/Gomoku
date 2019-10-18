@@ -117,6 +117,12 @@
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.cpp">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
+		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.h">
+			<Option target="ProgramowanieObiektoweC++"/>
+		</Unit>
 		<Unit filename="/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp">
 			<Option target="ProgramowanieObiektoweC++"/>
 		</Unit>

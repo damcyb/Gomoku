@@ -3,7 +3,6 @@
 //
 
 #include "BoardLogic.h"
-#include <iostream>
 
 using namespace std;
 
@@ -31,9 +30,9 @@ bool BoardLogic::isMarked(int x, int y) {
     int row = (x - 21) / 56;
     int col = (y - 21) / 56;
     if(boardFieldsArray[row][col] == constants.BLANK_FIELD) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 
@@ -50,14 +49,4 @@ int BoardLogic::checkWinSituation() {
     if(winWays.diagonalTest2(boardFieldsArray)) {
         return true;
     }
-}
-
-void BoardLogic::print() {
-    for(int i = 0; i < 18; i++) {
-        for(int j = 0; j < 18; j++) {
-            cout << boardFieldsArray[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl << endl << endl;
 }

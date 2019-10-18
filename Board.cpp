@@ -3,16 +3,12 @@
 //
 
 #include "Board.h"
-#include "FileManager.h"
-
-#include <iostream>
 
 using namespace std;
 
 void Board::loadBoardTexture() {
     double factor = 2.43 * 0.96;
     board.loadFromFile("./textures/board.png");
-    //board = textureManager.getboardTexture();
     boardPNG.setTexture(board);
     boardPNG.setScale(factor,factor);
 }

@@ -7,9 +7,3 @@
 BlackStone::BlackStone() {
     this->loadStoneTexture("./textures/stone_white.png");
 }
-
-BlackStone::BlackStone(double x, double y) {
-    this->setXCoord(x);
-    this->setYCoord(y);
-    this->loadStoneTexture("./textures/stone_black.png");
-}

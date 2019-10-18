@@ -9,10 +9,8 @@
 #include "Stone.h"
 
 class BlackStone: public Stone {
-private:
 public:
     BlackStone();
-    BlackStone(double x, double y);
 };
 
 

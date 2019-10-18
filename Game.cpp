@@ -3,12 +3,8 @@
 //
 
 #include "Game.h"
-#include "FileManager.h"
-
-#include <iostream>
 
 using namespace sf;
-using namespace std;
 
 Game::Game():applicationWindow(
         VideoMode(this->screenWidth, this->screenHeight, 32), applicationTitle) {
@@ -21,26 +17,27 @@ void Game::displayGamePage() {
     bool draw = false;
 
     BoardLogic boardLogic;
-
     RectangleShape fieldHighlight;
-
     Board board;
-    board.loadBoardTexture();
-    board.loadPlayersTableTexture();
-    board.loadPlayersUnderlineTexture();
-
-    Sprite blackStoneSprite;
-    Sprite whiteStoneSprite;
-
-    Sprite stonesArray[324];
-    int stoneCounter = 0;
-
     Stone whiteStone = WhiteStone();
     Stone blackStone = BlackStone();
 
+    Sprite boardSprite;
+    Sprite playersTableSprite;
+    Sprite playersUnderlineSprite;
+    Sprite blackStoneSprite;
+    Sprite whiteStoneSprite;
+    Sprite stonesArray[324];
+    int stoneCounter = 0;
+
+    board.loadBoardTexture();
+    board.loadPlayersTableTexture();
+    board.loadPlayersUnderlineTexture();
     whiteStone.loadStoneTexture("./textures/stone_white.png");
     blackStone.loadStoneTexture("./textures/stone_black.png");
 
+    boardSprite = board.getBoardTexture();
+    playersTableSprite = board.getPlayersTableTexture();
     whiteStoneSprite = whiteStone.getStoneTexture();
     blackStoneSprite = blackStone.getStoneTexture();
 
@@ -49,7 +46,6 @@ void Game::displayGamePage() {
     while( applicationWindow.isOpen()) {
 
         Vector2i position = Mouse::getPosition(applicationWindow);
-
 
         Event event;
         while( applicationWindow.pollEvent( event )) {
@@ -64,32 +60,27 @@ void Game::displayGamePage() {
 
             if (event.type == Event::MouseButtonPressed) {
                 if (event.key.code == Mouse::Left) {
-                    if(!gameWon) {
-                        if (insideGameField(position.x, position.y)) {
-                            if (boardLogic.isMarked(position.x, position.y)) {
-                                if (whiteMove) {
+                    if(!gameWon && insideGameField(position.x, position.y) && !boardLogic.isMarked(position.x, position.y)) {
+                        if (whiteMove) {
 
-                                    stonesArray[stoneCounter] = whiteStoneSprite;
-                                    stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
-                                                                          56 * ((position.y - 21) / 56) + 24);
-                                    stoneCounter++;
-                                    whiteMove = false;
+                            stonesArray[stoneCounter] = whiteStoneSprite;
+                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                  56 * ((position.y - 21) / 56) + 24);
+                            stoneCounter++;
+                            whiteMove = false;
 
-                                } else {
-                                    stonesArray[stoneCounter] = blackStoneSprite;
-                                    stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
-                                                                          56 * ((position.y - 21) / 56) + 24);
-                                    stoneCounter++;
-                                    whiteMove = true;
-                                }
-                                boardLogic.transformToArrayIndex(
-                                        stonesArray[stoneCounter - 1].getPosition().x,
-                                        stonesArray[stoneCounter - 1].getPosition().y,
-                                        !whiteMove);
-                                //boardLogic.print();
-                                fileManager.writePositionToFile(!whiteMove, position.x, position.y);
-                            }
+                        } else {
+                            stonesArray[stoneCounter] = blackStoneSprite;
+                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                  56 * ((position.y - 21) / 56) + 24);
+                            stoneCounter++;
+                            whiteMove = true;
                         }
+                        boardLogic.transformToArrayIndex(
+                                stonesArray[stoneCounter - 1].getPosition().x,
+                                stonesArray[stoneCounter - 1].getPosition().y,
+                                !whiteMove);
+                        fileManager.writePositionToFile(!whiteMove, position.x, position.y);
                     }
                 }
             }
@@ -125,12 +116,9 @@ void Game::displayGamePage() {
                 }
             }
         }
-
-
         applicationWindow.clear();
-
-        applicationWindow.draw(board.getPlayersTableTexture());
-        applicationWindow.draw(board.getBoardTexture());
+        applicationWindow.draw(playersTableSprite);
+        applicationWindow.draw(boardSprite);
 
         if(whiteMove) {
             board.setPlayersUnderlinePosition(1140,360);
@@ -143,11 +131,8 @@ void Game::displayGamePage() {
         }
         applicationWindow.draw(fieldHighlight);
         if(gameWon) {
-
-            if(!whiteMove) { //po ostatnim ruchu bialych whiteMove zmieni wartosc
-
+            if(!whiteMove) { //po ostatnim ruchu bialych whiteMove zmieni wartosc na przeciwna
                 displayGameOverPage(constants.WHITE_WIN);
-                //applicationWindow.draw(gameOver.getGameOverText());
             } else {
                 displayGameOverPage(constants.BLACK_WIN);
             }
@@ -155,9 +140,7 @@ void Game::displayGamePage() {
         if(draw) {
             displayGameOverPage(constants.DRAW);
         }
-
         applicationWindow.display();
-
     }
 }
 
@@ -172,21 +155,14 @@ bool Game::insideGameField(int x, int y) {
 }
 
 void Game::displayGameStartPage() {
-    int factor = 2;
-    Texture startGameTexture;
-    Sprite startGameSprite;
 
-    startGameTexture.loadFromFile("./textures/start-the-game.jpg");
-    startGameSprite.setTexture(startGameTexture);
-    startGameSprite.setPosition(-100,-200);
-    startGameSprite.setScale(factor,factor);
+    GameStart gameStart;
 
-    Text text;
-    Font font;
-    font.loadFromFile("./textures/calibri.ttf");
-    text.setString("Hello");
-    text.setFillColor(Color::Yellow);
-    text.setCharacterSize(100);
+    Texture gameStartTexture;
+    Sprite gameStartSprite;
+
+    gameStart.loadGameStartTexture();
+    gameStartSprite = gameStart.getGameStartTexture();
 
     while( applicationWindow.isOpen()) {
         Event event;
@@ -207,14 +183,14 @@ void Game::displayGameStartPage() {
                 displayGamePage();
         }
         applicationWindow.clear();
-        applicationWindow.draw(startGameSprite);
-        applicationWindow.draw(text);
+        applicationWindow.draw(gameStartSprite);
         applicationWindow.display();
     }
 }
 
 void Game::displayGameOverPage(int gameResult) {
     GameOver gameOver;
+
     gameOver.loadWhiteWinTexture();
     gameOver.loadBlackWinTexture();
     gameOver.loadDrawTexture();

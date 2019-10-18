@@ -38,13 +38,4 @@ void FileManager::openGameLog() {
     system(command.c_str());
 }
 
-//bool FileManager::isGameLogOpen() {
-//    if(file.good()) {
-//        cout << "hh" << endl;
-//        return true;
-//    } else {
-//        cout << "zz" << endl;
-//        return false;
-//    }
-//}
 

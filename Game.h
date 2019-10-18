@@ -18,6 +18,7 @@
 #include "BoardLogic.h"
 #include "GameOver.h"
 #include "FileManager.h"
+#include "GameStart.h"
 
 using namespace sf;
 
@@ -30,23 +31,17 @@ private:
     FileManager fileManager;
     Constants constants;
     bool gameLogOpen = false;
+
     bool insideGameField(int x, int y);
     bool playAgainButtonClicked(int x, int y);
     bool gameLogButtonClicked(int x, int y);
-//    Sprite startGameSprite;
-//    Texture startGameTexture;
-    //Board board;
-    //Stone stone;
-    //Sprite stoneSprite;
+    void displayGameOverPage(int gameResult);
+    void displayGamePage();
+    void displayGameLogPage();
 
 public:
     Game();
-    void displayGamePage();
     void displayGameStartPage();
-    void displayGameOverPage(int gameResult);
-    void displayGameLogPage();
-
 };
-
 
 #endif //PROGRAMOWANIEOBIEKTOWEC_GAME_H

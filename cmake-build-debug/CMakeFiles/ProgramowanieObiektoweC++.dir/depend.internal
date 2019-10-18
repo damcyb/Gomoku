@@ -8,7 +8,6 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o
 CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Board.h
- /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/BoardLogic.h
@@ -26,12 +25,16 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
+CMakeFiles/ProgramowanieObiektoweC++.dir/GameStart.cpp.o
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.cpp
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.h
 CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.cpp
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
@@ -50,6 +53,7 @@ CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
+ /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WhiteStone.h
  /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/WinWays.h

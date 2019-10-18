@@ -43,10 +43,6 @@ fstream
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
 Game.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
-FileManager.h
-/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
-iostream
--
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.h
 SFML/System.hpp
@@ -73,11 +69,21 @@ GameOver.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
 FileManager.h
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/FileManager.h
+GameStart.h
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.h
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameOver.h
 SFML/Graphics.hpp
 -
 string
+-
+
+/Users/flicom/CLionProjects/ProgramowanieObiektoweC++/GameStart.h
+SFML/System.hpp
+-
+SFML/Graphics.hpp
+-
+SFML/Window.hpp
 -
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Stone.h

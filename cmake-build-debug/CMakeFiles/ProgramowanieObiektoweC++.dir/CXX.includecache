@@ -37,6 +37,8 @@ SFML/Window.hpp
 -
 string
 -
+fstream
+-
 
 /Users/flicom/CLionProjects/ProgramowanieObiektoweC++/Game.cpp
 Game.h

@@ -10,7 +10,6 @@
 using namespace std;
 
 void FileManager::writeTitleToFile() {
-    fstream file;
 
     file.open("GameLog.txt", ios::out);
     if(file.good() == true) {
@@ -20,7 +19,6 @@ void FileManager::writeTitleToFile() {
 }
 
 void FileManager::writePositionToFile(bool whiteMove, int x, int y) {
-    fstream file;
     int row = (y - 21) / 56;
     int col = (x - 21) / 56;
 
@@ -39,4 +37,14 @@ void FileManager::openGameLog() {
     string command = "open ./GameLog.txt";
     system(command.c_str());
 }
+
+//bool FileManager::isGameLogOpen() {
+//    if(file.good()) {
+//        cout << "hh" << endl;
+//        return true;
+//    } else {
+//        cout << "zz" << endl;
+//        return false;
+//    }
+//}
 

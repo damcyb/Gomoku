@@ -28,6 +28,7 @@ private:
     String applicationTitle = "GOMOKU";
     RenderWindow applicationWindow;
     FileManager fileManager;
+    Constants constants;
     bool gameLogOpen = false;
     bool insideGameField(int x, int y);
     bool playAgainButtonClicked(int x, int y);
@@ -42,7 +43,7 @@ public:
     Game();
     void displayGamePage();
     void displayGameStartPage();
-    void displayGameOverPage(bool whiteWin);
+    void displayGameOverPage(int gameResult);
     void displayGameLogPage();
 
 };

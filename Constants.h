@@ -16,6 +16,9 @@ public:
     static const int BLANK_FIELD = 0;
     static const int WHITE_FIELD = 1;
     static const int BLACK_FIELD = 2;
+    static const int WHITE_WIN = 0;
+    static const int BLACK_WIN = 1;
+    static const int DRAW = 2;
 };
 
 

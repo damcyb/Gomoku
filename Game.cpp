@@ -16,12 +16,9 @@ Game::Game():applicationWindow(
 
 void Game::displayGamePage() {
 
-//    GameOver gameOver;
-//    gameOver.loadFont("./textures/font.otf");
-
-
     bool whiteMove = true;
     bool gameWon = false;
+    bool draw = false;
 
     BoardLogic boardLogic;
 
@@ -101,6 +98,10 @@ void Game::displayGamePage() {
                 if (event.key.code == Mouse::Left) {
                     if(boardLogic.checkWinSituation()) {
                         gameWon = true;
+                    } else {
+                        if(stoneCounter == 324) {
+                            draw = true;
+                        }
                     }
                 }
             }
@@ -145,11 +146,14 @@ void Game::displayGamePage() {
 
             if(!whiteMove) { //po ostatnim ruchu bialych whiteMove zmieni wartosc
 
-                displayGameOverPage(true);
+                displayGameOverPage(constants.WHITE_WIN);
                 //applicationWindow.draw(gameOver.getGameOverText());
             } else {
-                displayGameOverPage(false);
+                displayGameOverPage(constants.BLACK_WIN);
             }
+        }
+        if(draw) {
+            displayGameOverPage(constants.DRAW);
         }
 
         applicationWindow.display();
@@ -209,10 +213,12 @@ void Game::displayGameStartPage() {
     }
 }
 
-void Game::displayGameOverPage(bool whiteWin) {
+void Game::displayGameOverPage(int gameResult) {
     GameOver gameOver;
     gameOver.loadWhiteWinTexture();
     gameOver.loadBlackWinTexture();
+    gameOver.loadDrawTexture();
+    gameOver.loadGameLogCommunicate();
 
     while( applicationWindow.isOpen()) {
 
@@ -239,21 +245,24 @@ void Game::displayGameOverPage(bool whiteWin) {
             }
         }
         applicationWindow.clear();
-        if(whiteWin){
+        if(gameResult == constants.WHITE_WIN){
             applicationWindow.draw(gameOver.getWhiteWinTexture());
         }
-        else {
+        else if(gameResult == constants.BLACK_WIN) {
             applicationWindow.draw(gameOver.getBlackWinTexture());
         }
+        else if(gameResult == constants.DRAW) {
+            applicationWindow.draw(gameOver.getDrawTexture());
+        }
         if(gameLogOpen) {
-            applicationWindow.draw(gameOver.getGameLocCommunicate()); // napis do zrobienia!!!
+            applicationWindow.draw(gameOver.getGameLocCommunicate());
         }
         applicationWindow.display();
     }
 }
 
 bool Game::playAgainButtonClicked(int x, int y) {
-    if(x > 202 && x < 642 && y > 824 && y < 950 && !gameLogOpen) {
+    if(x > 202 && x < 642 && y > 824 && y < 950) {
         return true;
     } else {
         return false;

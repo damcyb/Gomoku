@@ -18,9 +18,16 @@ void GameOver::loadBlackWinTexture() {
     //blackWinSprite.setScale(factor,factor);
 }
 
+void GameOver::loadDrawTexture() {
+    drawTexture.loadFromFile("./textures/game_over_draw.jpg");
+    drawSprite.setTexture(drawTexture);
+}
+
 void GameOver::loadGameLogCommunicate() {
-    gameLogCommunicateTexture.loadFromFile("./textures/gameLog_communicate.jpg");
+    double factor = 1;
+    gameLogCommunicateTexture.loadFromFile("./textures/game_log_communicate.png");
     gameLogCommunicateSprite.setTexture(gameLogCommunicateTexture);
+    gameLogCommunicateSprite.setPosition(175, 160);
 }
 Sprite GameOver::getWhiteWinTexture() {
     return whiteWinSprite;
@@ -28,6 +35,10 @@ Sprite GameOver::getWhiteWinTexture() {
 
 Sprite GameOver::getBlackWinTexture() {
     return blackWinSprite;
+}
+
+Sprite GameOver::getDrawTexture() {
+    return drawSprite;
 }
 
 Sprite GameOver::getGameLocCommunicate() {

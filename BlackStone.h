@@ -7,6 +7,7 @@
 
 
 #include "Stone.h"
+#include <iostream>
 
 class BlackStone: public Stone {
 public:

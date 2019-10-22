@@ -6,11 +6,21 @@
 
 void Stone::loadStoneTexture(String path) {
     float factor = 0.88;
-    stoneTexture.loadFromFile(path);
-    stonePNG.setTexture(stoneTexture);
-    stonePNG.setScale(factor, factor);
+    fstream file;
+    try {
+        file.open(path, ios::in);
+        if(file.good() == true) {
+            stoneTexture.loadFromFile(path);
+            stoneSprite.setTexture(stoneTexture);
+            stoneSprite.setScale(factor, factor);
+        } else {
+            throw(logic_error("Could not load texture"));
+        }
+    } catch (logic_error x) {
+        cout << "Could not load stone texture";
+    }
 }
 
 Sprite Stone::getStoneTexture(){
-    return stonePNG;
+    return stoneSprite;
 }

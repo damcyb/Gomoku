@@ -58,32 +58,33 @@ void Game::displayGamePage() {
             if (event.type == Event::MouseButtonPressed && event.mouseButton.button == Mouse::Middle)
                 applicationWindow.close();
 
-            if (event.type == Event::MouseButtonPressed) {
-                if (event.key.code == Mouse::Left) {
-                    if(!gameWon && insideGameField(position.x, position.y) && !boardLogic.isMarked(position.x, position.y)) {
-                        if (whiteMove) {
+                if (event.type == Event::MouseButtonPressed) {
+                    if (event.key.code == Mouse::Left) {
+                        if(!gameWon && insideGameField(position.x, position.y) && !boardLogic.isMarked(position.x, position.y)
+                            && board.getIsBoolSuccessfulLoaded()) {
+                            if (whiteMove) {
 
-                            stonesArray[stoneCounter] = whiteStoneSprite;
-                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
-                                                                  56 * ((position.y - 21) / 56) + 24);
-                            stoneCounter++;
-                            whiteMove = false;
+                                stonesArray[stoneCounter] = whiteStoneSprite;
+                                stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                      56 * ((position.y - 21) / 56) + 24);
+                                stoneCounter++;
+                                whiteMove = false;
 
-                        } else {
-                            stonesArray[stoneCounter] = blackStoneSprite;
-                            stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
-                                                                  56 * ((position.y - 21) / 56) + 24);
-                            stoneCounter++;
-                            whiteMove = true;
+                            } else {
+                                stonesArray[stoneCounter] = blackStoneSprite;
+                                stonesArray[stoneCounter].setPosition(56 * ((position.x - 21) / 56) + 24,
+                                                                      56 * ((position.y - 21) / 56) + 24);
+                                stoneCounter++;
+                                whiteMove = true;
+                            }
+                            boardLogic.transformToArrayIndex(
+                                    stonesArray[stoneCounter - 1].getPosition().x,
+                                    stonesArray[stoneCounter - 1].getPosition().y,
+                                    !whiteMove);
+                            fileManager.writePositionToFile(!whiteMove, position.x, position.y);
                         }
-                        boardLogic.transformToArrayIndex(
-                                stonesArray[stoneCounter - 1].getPosition().x,
-                                stonesArray[stoneCounter - 1].getPosition().y,
-                                !whiteMove);
-                        fileManager.writePositionToFile(!whiteMove, position.x, position.y);
                     }
                 }
-            }
 
             if(event.type == Event::MouseButtonReleased) {
                 if (event.key.code == Mouse::Left) {
@@ -132,22 +133,21 @@ void Game::displayGamePage() {
         applicationWindow.draw(fieldHighlight);
         if(gameWon) {
             if(!whiteMove) { //po ostatnim ruchu bialych whiteMove zmieni wartosc na przeciwna
-                displayGameOverPage(constants.WHITE_WIN);
+                displayGameOverPage(Constants::WHITE_WIN);
             } else {
-                displayGameOverPage(constants.BLACK_WIN);
+                displayGameOverPage(Constants::BLACK_WIN);
             }
         }
         if(draw) {
-            displayGameOverPage(constants.DRAW);
+            displayGameOverPage(Constants::DRAW);
         }
         applicationWindow.display();
     }
 }
 
 bool Game::insideGameField(int x, int y) {
-    Constants constants;
-    if(x > constants.LEFT_BOARDER && x < constants.RIGHT_BOARDER
-       && y > constants.UP_BOARDER && y < constants.DOWN_BOARDER) {
+    if(x > Constants::LEFT_BOARDER && x < Constants::RIGHT_BOARDER
+       && y > Constants::UP_BOARDER && y < Constants::DOWN_BOARDER) {
         return true;
     } else {
         return false;
@@ -194,7 +194,6 @@ void Game::displayGameOverPage(int gameResult) {
     gameOver.loadWhiteWinTexture();
     gameOver.loadBlackWinTexture();
     gameOver.loadDrawTexture();
-    gameOver.loadGameLogCommunicate();
 
     while( applicationWindow.isOpen()) {
 
@@ -221,17 +220,14 @@ void Game::displayGameOverPage(int gameResult) {
             }
         }
         applicationWindow.clear();
-        if(gameResult == constants.WHITE_WIN){
+        if(gameResult == Constants::WHITE_WIN){
             applicationWindow.draw(gameOver.getWhiteWinTexture());
         }
-        else if(gameResult == constants.BLACK_WIN) {
+        else if(gameResult == Constants::BLACK_WIN) {
             applicationWindow.draw(gameOver.getBlackWinTexture());
         }
-        else if(gameResult == constants.DRAW) {
+        else if(gameResult == Constants::DRAW) {
             applicationWindow.draw(gameOver.getDrawTexture());
-        }
-        if(gameLogOpen) {
-            applicationWindow.draw(gameOver.getGameLocCommunicate());
         }
         applicationWindow.display();
     }
@@ -254,8 +250,7 @@ bool Game::gameLogButtonClicked(int x, int y) {
 }
 
 void Game::displayGameLogPage() {
-    gameLogOpen = true;
-    fileManager.openGameLog();
+    fileManager.readGameLogFromFile();
 }
 
 

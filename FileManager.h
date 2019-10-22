@@ -20,7 +20,7 @@ private:
 public:
     void writePositionToFile(bool whiteMove, int x, int y);
     void writeTitleToFile();
-    void openGameLog();
+    void readGameLogFromFile();
 };
 
 

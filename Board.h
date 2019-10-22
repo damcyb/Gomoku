@@ -9,18 +9,19 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <string>
+#include <fstream>
 
 using namespace sf;
 
 class Board {
 private:
-    Texture board;
+    bool isBoardSuccessfulLoaded = true;
+    Texture boardTexture;
     Texture playersTableTexture;
     Texture playersUnderlineTexture;
-    Sprite boardPNG;
+    Sprite boardSprite;
     Sprite playersTableSprite;
     Sprite playersUnderlineSprite;
-
 public:
     void loadBoardTexture();
     void loadPlayersTableTexture();
@@ -29,6 +30,7 @@ public:
     Sprite getBoardTexture();
     Sprite getPlayersTableTexture();
     Sprite getPlayersUnderlineTexture();
+    bool getIsBoolSuccessfulLoaded();
 };
 
 

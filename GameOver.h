@@ -7,6 +7,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <string>
+#include <fstream>
+#include <iostream>
 
 using namespace sf;
 
@@ -15,21 +17,16 @@ private:
     Texture whiteWinTexture;
     Texture blackWinTexture;
     Texture drawTexture;
-    Texture gameLogCommunicateTexture;
     Sprite whiteWinSprite;
     Sprite blackWinSprite;
     Sprite drawSprite;
-    Sprite gameLogCommunicateSprite;
 public:
     void loadWhiteWinTexture();
     void loadBlackWinTexture();
     void loadDrawTexture();
-    void loadGameLogCommunicate();
     Sprite getWhiteWinTexture();
     Sprite getBlackWinTexture();
     Sprite getDrawTexture();
-    Sprite getGameLocCommunicate();
 };
-
 
 #endif //PROGRAMOWANIEOBIEKTOWEC_GAMEOVER_H

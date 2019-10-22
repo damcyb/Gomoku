@@ -8,6 +8,8 @@
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <fstream>
+#include <iostream>
 
 using namespace sf;
 

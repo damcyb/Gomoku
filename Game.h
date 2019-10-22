@@ -29,8 +29,6 @@ private:
     String applicationTitle = "GOMOKU";
     RenderWindow applicationWindow;
     FileManager fileManager;
-    Constants constants;
-    bool gameLogOpen = false;
 
     bool insideGameField(int x, int y);
     bool playAgainButtonClicked(int x, int y);

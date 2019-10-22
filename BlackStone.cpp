@@ -4,6 +4,7 @@
 
 #include "BlackStone.h"
 
+
 BlackStone::BlackStone() {
-    this->loadStoneTexture("./textures/stone_white.png");
+    this->loadStoneTexture("./textures/stone_black.png");
 }

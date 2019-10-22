@@ -33,9 +33,24 @@ void FileManager::writePositionToFile(bool whiteMove, int x, int y) {
     }
 }
 
-void FileManager::openGameLog() {
-    string command = "open ./GameLog.txt";
-    system(command.c_str());
+void FileManager::readGameLogFromFile() {
+    string line;
+    try {
+        file.open("GameLog.txt", ios::in);
+        if(file.good() == true) {
+            while(!file.eof())
+            {
+                getline(file, line);
+                cout << line << endl;
+            }
+            file.close();
+        } else {
+            throw logic_error("Open file error");
+        }
+    } catch (logic_error x){
+        cout << "Open file error" << endl;
+    }
+
 }
 
 

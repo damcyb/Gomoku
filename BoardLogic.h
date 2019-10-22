@@ -11,7 +11,6 @@
 class BoardLogic {
 
 private:
-    Constants constants;
     WinWays winWays;
     int boardFieldsArray[18][18];
 

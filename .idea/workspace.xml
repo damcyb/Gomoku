@@ -13,32 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd12062d-1826-4f7d-affc-79bd4eb222de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlackStone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BlackStone.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlackStone.h" beforeDir="false" afterPath="$PROJECT_DIR$/BlackStone.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardLogic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BoardLogic.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardLogic.h" beforeDir="false" afterPath="$PROJECT_DIR$/BoardLogic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FileManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/FileManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStart.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/GameStart.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameStart.h" beforeDir="false" afterPath="$PROJECT_DIR$/GameStart.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Stone.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stone.h" beforeDir="false" afterPath="$PROJECT_DIR$/Stone.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/BlackStone.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/BoardLogic.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/FileManager.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/GameOver.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Stone.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/WhiteStone.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProgramowanieObiektoweC++" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProgramowanieObiektoweC++" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,6 +40,10 @@
     <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -123,7 +102,8 @@
       <workItem from="1571138108395" duration="75590000" />
       <workItem from="1571496528969" duration="6000" />
       <workItem from="1571659370016" duration="2616000" />
-      <workItem from="1571755549023" duration="5509000" />
+      <workItem from="1571755549023" duration="19313000" />
+      <workItem from="1572092900915" duration="1215000" />
     </task>
     <servers />
   </component>

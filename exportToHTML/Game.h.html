@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Game.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bbb529;}
+.s3 { color: #6a8759;}
+.s4 { color: #cc7832;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Game.h</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by FliCom on 11/10/2019.</span>
+<span class="s0">//</span>
+
+<span class="s2">#ifndef </span><span class="s1">PROGRAMOWANIEOBIEKTOWEC_GAME_H</span>
+<span class="s2">#define </span><span class="s1">PROGRAMOWANIEOBIEKTOWEC_GAME_H</span>
+
+<span class="s2">#include </span><span class="s3">&lt;SFML/System.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;SFML/Graphics.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;SFML/Window.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;string&gt;</span>
+
+<span class="s2">#include </span><span class="s3">&quot;Board.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;Stone.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;WhiteStone.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;BlackStone.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;Constants.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;BoardLogic.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;GameOver.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;FileManager.h&quot;</span>
+<span class="s2">#include </span><span class="s3">&quot;GameStart.h&quot;</span>
+
+<span class="s4">using namespace </span><span class="s1">sf</span><span class="s4">;</span>
+
+<span class="s4">class </span><span class="s1">Game: </span><span class="s4">public </span><span class="s1">RenderWindow {</span>
+<span class="s4">private</span><span class="s1">:</span>
+    <span class="s4">int </span><span class="s1">screenWidth = </span><span class="s5">1600</span><span class="s4">;</span>
+    <span class="s4">int </span><span class="s1">screenHeight = </span><span class="s5">1050</span><span class="s4">;</span>
+    <span class="s1">String applicationTitle = </span><span class="s3">&quot;GOMOKU&quot;</span><span class="s4">;</span>
+    <span class="s1">RenderWindow applicationWindow</span><span class="s4">;</span>
+    <span class="s1">FileManager fileManager</span><span class="s4">;</span>
+
+    <span class="s4">bool </span><span class="s1">insideGameField(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y)</span><span class="s4">;</span>
+    <span class="s4">bool </span><span class="s1">playAgainButtonClicked(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y)</span><span class="s4">;</span>
+    <span class="s4">bool </span><span class="s1">gameLogButtonClicked(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y)</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">displayGameOverPage(</span><span class="s4">int </span><span class="s1">gameResult)</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">displayGamePage()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">displayGameLogPage()</span><span class="s4">;</span>
+
+<span class="s4">public</span><span class="s1">:</span>
+    <span class="s1">Game()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">displayGameStartPage()</span><span class="s4">;</span>
+<span class="s1">}</span><span class="s4">;</span>
+
+<span class="s2">#endif </span><span class="s0">//PROGRAMOWANIEOBIEKTOWEC_GAME_H</span>
+</pre>
+</body>
+</html>

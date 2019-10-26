@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>CMakeLists.txt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+CMakeLists.txt</font>
+</center></td></tr></table>
+<pre>
+
+    <span class="s1">cmake_minimum_required</span><span class="s0">(</span><span class="s2">VERSION 3.6</span><span class="s0">)</span>
+    <span class="s1">project</span><span class="s0">(</span><span class="s2">ProgramowanieObiektoweC++</span><span class="s0">)</span>
+
+    <span class="s1">set</span><span class="s0">(</span><span class="s2">CMAKE_CXX_FLAGS </span><span class="s0">&quot;</span><span class="s3">${</span><span class="s2">CMAKE_CXX_FLAGS</span><span class="s3">} </span><span class="s2">-std=c++11</span><span class="s0">&quot;)</span>
+    <span class="s1">set</span><span class="s0">(</span><span class="s2">SOURCE_FILES main.cpp Board.cpp Board.h Game.cpp Game.h FileManager.cpp FileManager.h Stone.cpp Stone.h WhiteStone.cpp WhiteStone.h BlackStone.cpp BlackStone.h Constants.h BoardLogic.cpp BoardLogic.h WinWays.cpp WinWays.h GameOver.cpp GameOver.h GameStart.cpp GameStart.h</span><span class="s0">)</span>
+
+    <span class="s1">add_executable</span><span class="s0">(</span><span class="s2">ProgramowanieObiektoweC++ </span><span class="s3">${</span><span class="s2">SOURCE_FILES</span><span class="s3">}</span><span class="s0">)</span>
+    <span class="s1">set</span><span class="s0">(</span><span class="s2">CMAKE_MODULE_PATH </span><span class="s0">&quot;</span><span class="s3">${</span><span class="s2">CMAKE_CURRENT_LIST_DIR</span><span class="s3">}</span><span class="s2">/cmake_modules</span><span class="s0">&quot;)</span>
+    <span class="s1">find_package</span><span class="s0">(</span><span class="s2">SFML REQUIRED system window graphics network audio</span><span class="s0">)</span>
+    <span class="s3">if </span><span class="s0">(</span><span class="s2">SFML_FOUND</span><span class="s0">)</span>
+        <span class="s1">include_directories</span><span class="s0">(</span><span class="s3">${</span><span class="s2">SFML_ROOT</span><span class="s3">}</span><span class="s0">)</span>
+        <span class="s1">target_link_libraries</span><span class="s0">(</span><span class="s2">ProgramowanieObiektoweC++ </span><span class="s3">${</span><span class="s2">SFML_LIBRARIES</span><span class="s3">}</span><span class="s0">)</span>
+    <span class="s3">endif</span><span class="s0">()</span>
+
+</pre>
+</body>
+</html>

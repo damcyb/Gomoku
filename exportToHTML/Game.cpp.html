@@ -1,0 +1,280 @@
+<html>
+<head>
+<title>Game.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bbb529;}
+.s3 { color: #6a8759;}
+.s4 { color: #cc7832;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Game.cpp</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by FliCom on 11/10/2019.</span>
+<span class="s0">//</span>
+
+<span class="s2">#include </span><span class="s3">&quot;Game.h&quot;</span>
+
+<span class="s4">using namespace </span><span class="s1">sf</span><span class="s4">;</span>
+
+<span class="s1">Game::Game():applicationWindow(</span>
+        <span class="s1">VideoMode(</span><span class="s4">this</span><span class="s1">-&gt;screenWidth</span><span class="s4">, this</span><span class="s1">-&gt;screenHeight</span><span class="s4">, </span><span class="s5">32</span><span class="s1">)</span><span class="s4">, </span><span class="s1">applicationTitle) {</span>
+<span class="s1">}</span>
+
+<span class="s4">void </span><span class="s1">Game::displayGamePage() {</span>
+
+    <span class="s4">bool </span><span class="s1">whiteMove = </span><span class="s4">true;</span>
+    <span class="s4">bool </span><span class="s1">gameWon = </span><span class="s4">false;</span>
+    <span class="s4">bool </span><span class="s1">draw = </span><span class="s4">false;</span>
+
+    <span class="s1">BoardLogic boardLogic</span><span class="s4">;</span>
+    <span class="s1">RectangleShape fieldHighlight</span><span class="s4">;</span>
+    <span class="s1">Board board</span><span class="s4">;</span>
+    <span class="s1">Stone whiteStone = WhiteStone()</span><span class="s4">;</span>
+    <span class="s1">Stone blackStone = BlackStone()</span><span class="s4">;</span>
+
+    <span class="s1">Sprite boardSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite playersTableSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite playersUnderlineSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite blackStoneSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite whiteStoneSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite stonesArray[</span><span class="s5">324</span><span class="s1">]</span><span class="s4">;</span>
+    <span class="s4">int </span><span class="s1">stoneCounter = </span><span class="s5">0</span><span class="s4">;</span>
+
+    <span class="s1">board.loadBoardTexture()</span><span class="s4">;</span>
+    <span class="s1">board.loadPlayersTableTexture()</span><span class="s4">;</span>
+    <span class="s1">board.loadPlayersUnderlineTexture()</span><span class="s4">;</span>
+    <span class="s1">whiteStone.loadStoneTexture(</span><span class="s3">&quot;./textures/stone_white.png&quot;</span><span class="s1">)</span><span class="s4">;</span>
+    <span class="s1">blackStone.loadStoneTexture(</span><span class="s3">&quot;./textures/stone_black.png&quot;</span><span class="s1">)</span><span class="s4">;</span>
+
+    <span class="s1">boardSprite = board.getBoardTexture()</span><span class="s4">;</span>
+    <span class="s1">playersTableSprite = board.getPlayersTableTexture()</span><span class="s4">;</span>
+    <span class="s1">whiteStoneSprite = whiteStone.getStoneTexture()</span><span class="s4">;</span>
+    <span class="s1">blackStoneSprite = blackStone.getStoneTexture()</span><span class="s4">;</span>
+
+    <span class="s1">fileManager.writeTitleToFile()</span><span class="s4">;</span>
+
+    <span class="s4">while</span><span class="s1">( applicationWindow.isOpen()) {</span>
+
+        <span class="s1">Vector2i position = Mouse::getPosition(applicationWindow)</span><span class="s4">;</span>
+
+        <span class="s1">Event event</span><span class="s4">;</span>
+        <span class="s4">while</span><span class="s1">( applicationWindow.pollEvent( event )) {</span>
+            <span class="s4">if </span><span class="s1">(event.type == Event::Closed)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::KeyPressed &amp;&amp; event.key.code == Keyboard::Escape)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::MouseButtonPressed &amp;&amp; event.mouseButton.button == Mouse::Middle)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+                <span class="s4">if </span><span class="s1">(event.type == Event::MouseButtonPressed) {</span>
+                    <span class="s4">if </span><span class="s1">(event.key.code == Mouse::Left) {</span>
+                        <span class="s4">if</span><span class="s1">(!gameWon &amp;&amp; insideGameField(position.x</span><span class="s4">, </span><span class="s1">position.y) &amp;&amp; !boardLogic.isMarked(position.x</span><span class="s4">, </span><span class="s1">position.y)</span>
+                            <span class="s1">&amp;&amp; board.getIsBoolSuccessfulLoaded()) {</span>
+                            <span class="s4">if </span><span class="s1">(whiteMove) {</span>
+
+                                <span class="s1">stonesArray[stoneCounter] = whiteStoneSprite</span><span class="s4">;</span>
+                                <span class="s1">stonesArray[stoneCounter].setPosition(</span><span class="s5">56 </span><span class="s1">* ((position.x - </span><span class="s5">21</span><span class="s1">) / </span><span class="s5">56</span><span class="s1">) + </span><span class="s5">24</span><span class="s4">,</span>
+                                                                      <span class="s5">56 </span><span class="s1">* ((position.y - </span><span class="s5">21</span><span class="s1">) / </span><span class="s5">56</span><span class="s1">) + </span><span class="s5">24</span><span class="s1">)</span><span class="s4">;</span>
+                                <span class="s1">stoneCounter++</span><span class="s4">;</span>
+                                <span class="s1">whiteMove = </span><span class="s4">false;</span>
+
+                            <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+                                <span class="s1">stonesArray[stoneCounter] = blackStoneSprite</span><span class="s4">;</span>
+                                <span class="s1">stonesArray[stoneCounter].setPosition(</span><span class="s5">56 </span><span class="s1">* ((position.x - </span><span class="s5">21</span><span class="s1">) / </span><span class="s5">56</span><span class="s1">) + </span><span class="s5">24</span><span class="s4">,</span>
+                                                                      <span class="s5">56 </span><span class="s1">* ((position.y - </span><span class="s5">21</span><span class="s1">) / </span><span class="s5">56</span><span class="s1">) + </span><span class="s5">24</span><span class="s1">)</span><span class="s4">;</span>
+                                <span class="s1">stoneCounter++</span><span class="s4">;</span>
+                                <span class="s1">whiteMove = </span><span class="s4">true;</span>
+                            <span class="s1">}</span>
+                            <span class="s1">boardLogic.transformToArrayIndex(</span>
+                                    <span class="s1">stonesArray[stoneCounter - </span><span class="s5">1</span><span class="s1">].getPosition().x</span><span class="s4">,</span>
+                                    <span class="s1">stonesArray[stoneCounter - </span><span class="s5">1</span><span class="s1">].getPosition().y</span><span class="s4">,</span>
+                                    <span class="s1">!whiteMove)</span><span class="s4">;</span>
+                            <span class="s1">fileManager.writePositionToFile(!whiteMove</span><span class="s4">, </span><span class="s1">position.x</span><span class="s4">, </span><span class="s1">position.y)</span><span class="s4">;</span>
+                        <span class="s1">}</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+
+            <span class="s4">if</span><span class="s1">(event.type == Event::MouseButtonReleased) {</span>
+                <span class="s4">if </span><span class="s1">(event.key.code == Mouse::Left) {</span>
+                    <span class="s4">if</span><span class="s1">(boardLogic.checkWinSituation()) {</span>
+                        <span class="s1">gameWon = </span><span class="s4">true;</span>
+                    <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+                        <span class="s4">if</span><span class="s1">(stoneCounter == </span><span class="s5">324</span><span class="s1">) {</span>
+                            <span class="s1">draw = </span><span class="s4">true;</span>
+                        <span class="s1">}</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+            <span class="s0">/* Cala plansza ma wymiar 1008 x 1008 jednostek i ma 18x18 pol. Liczby dopasowano w taki sposob, aby 
+             * podswietlajacy pole prostokat znajdowal sie na wlasciwym polu 
+             * 56 - rozm pojedynczego boku pola 
+             * 21 - przesuniecie o grubosc ramki (obwodki pola do gry) 
+             * 26 - polowa rozmiaru pola +- korekta ustawienia 
+             * 53 - bok pola pomniejszony tak, zeby podswietlenie nie zaslanialo krawedzi pola 
+             */</span>
+            <span class="s4">if</span><span class="s1">(event.type == Event::MouseMoved) {</span>
+                <span class="s4">if</span><span class="s1">(!gameWon) {</span>
+                    <span class="s4">if </span><span class="s1">(insideGameField(position.x</span><span class="s4">, </span><span class="s1">position.y)) {</span>
+                        <span class="s1">fieldHighlight = RectangleShape(Vector2f(</span><span class="s5">53</span><span class="s4">, </span><span class="s5">53</span><span class="s1">))</span><span class="s4">;</span>
+                        <span class="s1">fieldHighlight.setPosition(</span><span class="s5">56 </span><span class="s1">* ((position.x - </span><span class="s5">21</span><span class="s1">) / </span><span class="s5">56</span><span class="s1">) + </span><span class="s5">26</span><span class="s4">,</span>
+                                                   <span class="s5">56 </span><span class="s1">* ((position.y - </span><span class="s5">21</span><span class="s1">) / </span><span class="s5">56</span><span class="s1">) + </span><span class="s5">26</span><span class="s1">)</span><span class="s4">;</span>
+                        <span class="s1">fieldHighlight.setFillColor(Color(</span><span class="s5">30</span><span class="s4">, </span><span class="s5">30</span><span class="s4">, </span><span class="s5">30</span><span class="s4">, </span><span class="s5">80</span><span class="s1">))</span><span class="s4">;</span>
+                    <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+                        <span class="s1">fieldHighlight = RectangleShape(Vector2f(</span><span class="s5">0</span><span class="s4">, </span><span class="s5">0</span><span class="s1">))</span><span class="s4">;</span>
+                    <span class="s1">}</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.clear()</span><span class="s4">;</span>
+        <span class="s1">applicationWindow.draw(playersTableSprite)</span><span class="s4">;</span>
+        <span class="s1">applicationWindow.draw(boardSprite)</span><span class="s4">;</span>
+
+        <span class="s4">if</span><span class="s1">(whiteMove) {</span>
+            <span class="s1">board.setPlayersUnderlinePosition(</span><span class="s5">1140</span><span class="s4">,</span><span class="s5">360</span><span class="s1">)</span><span class="s4">;</span>
+        <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+            <span class="s1">board.setPlayersUnderlinePosition(</span><span class="s5">1140</span><span class="s4">,</span><span class="s5">815</span><span class="s1">)</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.draw(board.getPlayersUnderlineTexture())</span><span class="s4">;</span>
+        <span class="s4">for</span><span class="s1">(</span><span class="s4">int </span><span class="s1">i = </span><span class="s5">0</span><span class="s4">; </span><span class="s1">i &lt; </span><span class="s5">324</span><span class="s4">; </span><span class="s1">i++) {</span>
+            <span class="s1">applicationWindow.draw(stonesArray[i])</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.draw(fieldHighlight)</span><span class="s4">;</span>
+        <span class="s4">if</span><span class="s1">(gameWon) {</span>
+            <span class="s4">if</span><span class="s1">(!whiteMove) { </span><span class="s0">//po ostatnim ruchu bialych whiteMove zmieni wartosc na przeciwna</span>
+                <span class="s1">displayGameOverPage(Constants::WHITE_WIN)</span><span class="s4">;</span>
+            <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+                <span class="s1">displayGameOverPage(Constants::BLACK_WIN)</span><span class="s4">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s4">if</span><span class="s1">(draw) {</span>
+            <span class="s1">displayGameOverPage(Constants::DRAW)</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.display()</span><span class="s4">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s4">bool </span><span class="s1">Game::insideGameField(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y) {</span>
+    <span class="s4">if</span><span class="s1">(x &gt; Constants::LEFT_BOARDER &amp;&amp; x &lt; Constants::RIGHT_BOARDER</span>
+       <span class="s1">&amp;&amp; y &gt; Constants::UP_BOARDER &amp;&amp; y &lt; Constants::DOWN_BOARDER) {</span>
+        <span class="s4">return true;</span>
+    <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+        <span class="s4">return false;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s4">void </span><span class="s1">Game::displayGameStartPage() {</span>
+
+    <span class="s1">GameStart gameStart</span><span class="s4">;</span>
+
+    <span class="s1">Texture gameStartTexture</span><span class="s4">;</span>
+    <span class="s1">Sprite gameStartSprite</span><span class="s4">;</span>
+
+    <span class="s1">gameStart.loadGameStartTexture()</span><span class="s4">;</span>
+    <span class="s1">gameStartSprite = gameStart.getGameStartTexture()</span><span class="s4">;</span>
+
+    <span class="s4">while</span><span class="s1">( applicationWindow.isOpen()) {</span>
+        <span class="s1">Event event</span><span class="s4">;</span>
+        <span class="s4">while</span><span class="s1">( applicationWindow.pollEvent( event )) {</span>
+            <span class="s4">if </span><span class="s1">(event.type == Event::Closed)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::KeyPressed &amp;&amp; event.key.code == Keyboard::Escape)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::MouseButtonPressed &amp;&amp; event.mouseButton.button == Mouse::Middle)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::MouseButtonPressed &amp;&amp; event.mouseButton.button == Mouse::Left)</span>
+                <span class="s1">displayGamePage()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::KeyPressed &amp;&amp; event.key.code != Keyboard::Escape )</span>
+                <span class="s1">displayGamePage()</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.clear()</span><span class="s4">;</span>
+        <span class="s1">applicationWindow.draw(gameStartSprite)</span><span class="s4">;</span>
+        <span class="s1">applicationWindow.display()</span><span class="s4">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s4">void </span><span class="s1">Game::displayGameOverPage(</span><span class="s4">int </span><span class="s1">gameResult) {</span>
+    <span class="s1">GameOver gameOver</span><span class="s4">;</span>
+
+    <span class="s1">gameOver.loadWhiteWinTexture()</span><span class="s4">;</span>
+    <span class="s1">gameOver.loadBlackWinTexture()</span><span class="s4">;</span>
+    <span class="s1">gameOver.loadDrawTexture()</span><span class="s4">;</span>
+
+    <span class="s4">while</span><span class="s1">( applicationWindow.isOpen()) {</span>
+
+        <span class="s1">Vector2i position = Mouse::getPosition(applicationWindow)</span><span class="s4">;</span>
+
+        <span class="s1">Event event</span><span class="s4">;</span>
+        <span class="s4">while</span><span class="s1">( applicationWindow.pollEvent( event )) {</span>
+            <span class="s4">if </span><span class="s1">(event.type == Event::Closed)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::KeyPressed &amp;&amp; event.key.code == Keyboard::Escape)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::MouseButtonPressed &amp;&amp; event.mouseButton.button == Mouse::Middle)</span>
+                <span class="s1">applicationWindow.close()</span><span class="s4">;</span>
+
+            <span class="s4">if </span><span class="s1">(event.type == Event::MouseButtonPressed &amp;&amp; event.mouseButton.button == Mouse::Left) {</span>
+                <span class="s4">if </span><span class="s1">(playAgainButtonClicked(position.x</span><span class="s4">, </span><span class="s1">position.y)) {</span>
+                    <span class="s1">displayGamePage()</span><span class="s4">;</span>
+                <span class="s1">}</span>
+                <span class="s4">if </span><span class="s1">(gameLogButtonClicked(position.x</span><span class="s4">, </span><span class="s1">position.y)) {</span>
+                    <span class="s1">displayGameLogPage()</span><span class="s4">;</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.clear()</span><span class="s4">;</span>
+        <span class="s4">if</span><span class="s1">(gameResult == Constants::WHITE_WIN){</span>
+            <span class="s1">applicationWindow.draw(gameOver.getWhiteWinTexture())</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s4">else if</span><span class="s1">(gameResult == Constants::BLACK_WIN) {</span>
+            <span class="s1">applicationWindow.draw(gameOver.getBlackWinTexture())</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s4">else if</span><span class="s1">(gameResult == Constants::DRAW) {</span>
+            <span class="s1">applicationWindow.draw(gameOver.getDrawTexture())</span><span class="s4">;</span>
+        <span class="s1">}</span>
+        <span class="s1">applicationWindow.display()</span><span class="s4">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s4">bool </span><span class="s1">Game::playAgainButtonClicked(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y) {</span>
+    <span class="s4">if</span><span class="s1">(x &gt; </span><span class="s5">202 </span><span class="s1">&amp;&amp; x &lt; </span><span class="s5">642 </span><span class="s1">&amp;&amp; y &gt; </span><span class="s5">824 </span><span class="s1">&amp;&amp; y &lt; </span><span class="s5">950</span><span class="s1">) {</span>
+        <span class="s4">return true;</span>
+    <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+        <span class="s4">return false;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s4">bool </span><span class="s1">Game::gameLogButtonClicked(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y) {</span>
+    <span class="s4">if</span><span class="s1">(x &gt; </span><span class="s5">970 </span><span class="s1">&amp;&amp; x &lt; </span><span class="s5">1418 </span><span class="s1">&amp;&amp; y &gt; </span><span class="s5">818 </span><span class="s1">&amp;&amp; y &lt; </span><span class="s5">950</span><span class="s1">) {</span>
+        <span class="s4">return true;</span>
+    <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+        <span class="s4">return false;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+<span class="s4">void </span><span class="s1">Game::displayGameLogPage() {</span>
+    <span class="s1">fileManager.readGameLogFromFile()</span><span class="s4">;</span>
+<span class="s1">}</span>
+
+
+
+
+</pre>
+</body>
+</html>

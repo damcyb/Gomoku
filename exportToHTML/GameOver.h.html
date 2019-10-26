@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>GameOver.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bbb529;}
+.s3 { color: #6a8759;}
+.s4 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+GameOver.h</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by FliCom on 16/10/2019.</span>
+<span class="s0">//</span>
+
+<span class="s2">#ifndef </span><span class="s1">PROGRAMOWANIEOBIEKTOWEC_GAMEOVER_H</span>
+<span class="s2">#define </span><span class="s1">PROGRAMOWANIEOBIEKTOWEC_GAMEOVER_H</span>
+
+<span class="s2">#include </span><span class="s3">&lt;SFML/Graphics.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;string&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;fstream&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;iostream&gt;</span>
+
+<span class="s4">using namespace </span><span class="s1">sf</span><span class="s4">;</span>
+
+<span class="s4">class </span><span class="s1">GameOver {</span>
+<span class="s4">private</span><span class="s1">:</span>
+    <span class="s1">Texture whiteWinTexture</span><span class="s4">;</span>
+    <span class="s1">Texture blackWinTexture</span><span class="s4">;</span>
+    <span class="s1">Texture drawTexture</span><span class="s4">;</span>
+    <span class="s1">Sprite whiteWinSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite blackWinSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite drawSprite</span><span class="s4">;</span>
+<span class="s4">public</span><span class="s1">:</span>
+    <span class="s4">void </span><span class="s1">loadWhiteWinTexture()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">loadBlackWinTexture()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">loadDrawTexture()</span><span class="s4">;</span>
+    <span class="s1">Sprite getWhiteWinTexture()</span><span class="s4">;</span>
+    <span class="s1">Sprite getBlackWinTexture()</span><span class="s4">;</span>
+    <span class="s1">Sprite getDrawTexture()</span><span class="s4">;</span>
+<span class="s1">}</span><span class="s4">;</span>
+
+<span class="s2">#endif </span><span class="s0">//PROGRAMOWANIEOBIEKTOWEC_GAMEOVER_H</span>
+</pre>
+</body>
+</html>

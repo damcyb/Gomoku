@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Board.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #bbb529;}
+.s3 { color: #6a8759;}
+.s4 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Board.h</font>
+</center></td></tr></table>
+<pre><span class="s0">//</span>
+<span class="s0">// Created by FliCom on 11/10/2019.</span>
+<span class="s0">//</span>
+
+<span class="s2">#ifndef </span><span class="s1">PROGRAMOWANIEOBIEKTOWEC_BOARD_H</span>
+<span class="s2">#define </span><span class="s1">PROGRAMOWANIEOBIEKTOWEC_BOARD_H</span>
+
+<span class="s2">#include </span><span class="s3">&lt;SFML/System.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;SFML/Graphics.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;SFML/Window.hpp&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;string&gt;</span>
+<span class="s2">#include </span><span class="s3">&lt;fstream&gt;</span>
+
+<span class="s4">using namespace </span><span class="s1">sf</span><span class="s4">;</span>
+
+<span class="s4">class </span><span class="s1">Board {</span>
+<span class="s4">private</span><span class="s1">:</span>
+    <span class="s4">bool </span><span class="s1">isBoardSuccessfulLoaded = </span><span class="s4">true;</span>
+    <span class="s1">Texture boardTexture</span><span class="s4">;</span>
+    <span class="s1">Texture playersTableTexture</span><span class="s4">;</span>
+    <span class="s1">Texture playersUnderlineTexture</span><span class="s4">;</span>
+    <span class="s1">Sprite boardSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite playersTableSprite</span><span class="s4">;</span>
+    <span class="s1">Sprite playersUnderlineSprite</span><span class="s4">;</span>
+<span class="s4">public</span><span class="s1">:</span>
+    <span class="s4">void </span><span class="s1">loadBoardTexture()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">loadPlayersTableTexture()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">loadPlayersUnderlineTexture()</span><span class="s4">;</span>
+    <span class="s4">void </span><span class="s1">setPlayersUnderlinePosition(</span><span class="s4">int </span><span class="s1">x</span><span class="s4">, int </span><span class="s1">y)</span><span class="s4">;</span>
+    <span class="s1">Sprite getBoardTexture()</span><span class="s4">;</span>
+    <span class="s1">Sprite getPlayersTableTexture()</span><span class="s4">;</span>
+    <span class="s1">Sprite getPlayersUnderlineTexture()</span><span class="s4">;</span>
+    <span class="s4">bool </span><span class="s1">getIsBoolSuccessfulLoaded()</span><span class="s4">;</span>
+<span class="s1">}</span><span class="s4">;</span>
+
+
+<span class="s2">#endif </span><span class="s0">//PROGRAMOWANIEOBIEKTOWEC_BOARD_H</span>
+</pre>
+</body>
+</html>

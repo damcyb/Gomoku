@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cd12062d-1826-4f7d-affc-79bd4eb222de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProgramowanieObiektoweC++" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProgramowanieObiektoweC++" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +101,8 @@
       <workItem from="1571496528969" duration="6000" />
       <workItem from="1571659370016" duration="2616000" />
       <workItem from="1571755549023" duration="19313000" />
-      <workItem from="1572092900915" duration="1215000" />
+      <workItem from="1572092900915" duration="1803000" />
+      <workItem from="1572173396020" duration="522000" />
     </task>
     <servers />
   </component>

@@ -1,1 +1,3 @@
 # GOMOKU GAMELOG #
+W: row 9 col 16
+B: row 10 col 15

@@ -4,7 +4,9 @@
 
 #include "Stone.h"
 
-void Stone::loadStoneTexture(String path) {
+void Stone::loadStoneTexture() {
+    String path = "./textures/stone_white.png";
+    cout << "Stone \n";
     float factor = 0.88;
     fstream file;
     try {

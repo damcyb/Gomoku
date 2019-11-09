@@ -20,8 +20,8 @@ private:
     Texture stoneTexture;
     Sprite stoneSprite;
 public:
-    void loadStoneTexture(String path);
-    Sprite getStoneTexture();
+    virtual void loadStoneTexture();
+    virtual Sprite getStoneTexture();
 };
 
 #endif //PROGRAMOWANIEOBIEKTOWEC_STONE_H

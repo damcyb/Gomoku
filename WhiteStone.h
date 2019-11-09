@@ -9,9 +9,13 @@
 #include "Stone.h"
 
 class WhiteStone: public Stone {
+private:
+    Texture stoneTexture;
+    Sprite stoneSprite;
 public:
     WhiteStone();
+    void loadStoneTexture();
+    Sprite getStoneTexture();
 };
-
 
 #endif //PROGRAMOWANIEOBIEKTOWEC_WHITESTONE_H

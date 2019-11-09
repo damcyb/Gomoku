@@ -13,6 +13,256 @@
   <component name="ChangeListManager">
     <list default="true" id="cd12062d-1826-4f7d-affc-79bd4eb222de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackStone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BlackStone.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackStone.h" beforeDir="false" afterPath="$PROJECT_DIR$/BlackStone.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/Board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gomoku UML v1.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Stone.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stone.h" beforeDir="false" afterPath="$PROJECT_DIR$/Stone.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhiteStone.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/WhiteStone.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WhiteStone.h" beforeDir="false" afterPath="$PROJECT_DIR$/WhiteStone.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Board.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProgramowanieObiektoweC++.dir/Game.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/GameLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/GameLog.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ProgramowanieObiektoweC++" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ProgramowanieObiektoweC++" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exportToHTML/Board.cpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/exportToHTML/Board.cpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exportToHTML/Board.h.html" beforeDir="false" afterPath="$PROJECT_DIR$/exportToHTML/Board.h.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exportToHTML/Game.cpp.html" beforeDir="false" afterPath="$PROJECT_DIR$/exportToHTML/Game.cpp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_black_stone_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_black_stone_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_black_stone_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_black_stone_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_logic_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_logic_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_logic_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_board_logic_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_constants_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_constants_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_file_manager_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_file_manager_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_file_manager_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_file_manager_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_over_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_over_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_over_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_over_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_start_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_start_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_start_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_game_start_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_stone_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_stone_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_stone_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_stone_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_white_stone_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_white_stone_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_white_stone_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_white_stone_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_win_ways_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_win_ways_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_win_ways_8h.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/_win_ways_8h_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/annotated.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/bc_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/bdwn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_black_stone-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_black_stone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_black_stone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_board-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_board.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_board_logic-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_board_logic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_file_manager-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_file_manager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game_over-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game_over.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game_start-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_game_start.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_stone-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_stone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_stone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_white_stone-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_white_stone.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_white_stone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_win_ways-members.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/class_win_ways.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/closed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/doc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/doxygen.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/doxygen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/dynsections.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/files.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/folderclosed.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/folderopen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/functions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/functions_func.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/globals.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/globals_func.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/hierarchy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/main_8cpp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/main_8cpp_source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/menudata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/nav_f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/nav_g.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/nav_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_b.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_c.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_d.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/all_d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/classes_4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/files_6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_0.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_a.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_b.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_c.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/functions_c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/mag_sel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/nomatches.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/search.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/search_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/search_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/search_r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/search/searchdata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/splitbar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/sync_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/sync_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/tab_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/tab_b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/tab_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/tab_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/tabs.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_black_stone_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_black_stone_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_board_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_board_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_board_logic_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_board_logic_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_constants_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_file_manager_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_file_manager_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_game_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_game_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_game_over_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_game_over_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_game_start_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_game_start_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_stone_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_stone_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_white_stone_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_white_stone_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_win_ways_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/_win_ways_8h.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/annotated.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_black_stone.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_black_stone.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_board.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_board_logic.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_file_manager.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_game.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_game.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_game_over.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_game_start.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_stone.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_stone.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_white_stone.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_white_stone.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/class_win_ways.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/doxygen.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/files.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/hierarchy.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/longtable_doxygen.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/main_8cpp.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/refman.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/latex/tabu_doxygen.sty" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,6 +353,8 @@
       <workItem from="1571755549023" duration="19313000" />
       <workItem from="1572092900915" duration="1803000" />
       <workItem from="1572173396020" duration="522000" />
+      <workItem from="1572253029048" duration="8732000" />
+      <workItem from="1572818311244" duration="10085000" />
     </task>
     <servers />
   </component>

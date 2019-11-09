@@ -30,7 +30,7 @@ public:
     Sprite getBoardTexture();
     Sprite getPlayersTableTexture();
     Sprite getPlayersUnderlineTexture();
-    bool getIsBoolSuccessfulLoaded();
+    bool getIsBoardSuccessfulLoaded();
 };
 
 

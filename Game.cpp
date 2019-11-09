@@ -7,7 +7,7 @@
 using namespace sf;
 
 Game::Game():applicationWindow(
-        VideoMode(this->screenWidth, this->screenHeight, 32), applicationTitle) {
+        VideoMode(this->screenWidth, this->screenHeight, 32), applicationTitle, sf::Style::Close) {
 }
 
 void Game::displayGamePage() {
@@ -19,8 +19,8 @@ void Game::displayGamePage() {
     BoardLogic boardLogic;
     RectangleShape fieldHighlight;
     Board board;
-    Stone whiteStone = WhiteStone();
-    Stone blackStone = BlackStone();
+    Stone *whiteStone = new WhiteStone();
+    Stone *blackStone = new BlackStone();
 
     Sprite boardSprite;
     Sprite playersTableSprite;
@@ -33,13 +33,16 @@ void Game::displayGamePage() {
     board.loadBoardTexture();
     board.loadPlayersTableTexture();
     board.loadPlayersUnderlineTexture();
-    whiteStone.loadStoneTexture("./textures/stone_white.png");
-    blackStone.loadStoneTexture("./textures/stone_black.png");
+//    whiteStone->loadStoneTexture("./textures/stone_white.png");
+//    blackStone->loadStoneTexture("./textures/stone_black.png");
+
+    whiteStone->loadStoneTexture();
+    blackStone->loadStoneTexture();
 
     boardSprite = board.getBoardTexture();
     playersTableSprite = board.getPlayersTableTexture();
-    whiteStoneSprite = whiteStone.getStoneTexture();
-    blackStoneSprite = blackStone.getStoneTexture();
+    whiteStoneSprite = whiteStone->getStoneTexture();
+    blackStoneSprite = blackStone->getStoneTexture();
 
     fileManager.writeTitleToFile();
 
@@ -61,7 +64,7 @@ void Game::displayGamePage() {
                 if (event.type == Event::MouseButtonPressed) {
                     if (event.key.code == Mouse::Left) {
                         if(!gameWon && insideGameField(position.x, position.y) && !boardLogic.isMarked(position.x, position.y)
-                            && board.getIsBoolSuccessfulLoaded()) {
+                            && board.getIsBoardSuccessfulLoaded()) {
                             if (whiteMove) {
 
                                 stonesArray[stoneCounter] = whiteStoneSprite;

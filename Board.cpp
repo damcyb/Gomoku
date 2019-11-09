@@ -77,6 +77,6 @@ Sprite Board::getPlayersUnderlineTexture() {
     return playersUnderlineSprite;
 }
 
-bool Board::getIsBoolSuccessfulLoaded() {
+bool Board::getIsBoardSuccessfulLoaded() {
     return isBoardSuccessfulLoaded;
 }
